@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Fradya Bahana - Products</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!--JS-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+
+      $('#textarea1').trigger('autoresize');
+
+      $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+      });
+
+      $('select').material_select();
+        
+    });
+  </script>
+</head>
+<body>
+  <nav class="light-blue darken-4 white-text" role="navigation">
+    <div class="nav-wrapper container white-text">
+      <a id="logo-container" href="#" class="brand-logo">
+        <img class="responsive-img" style="margin-top:2.5px; margin-bottom:2.5px;" src="logo.png" align="Fradya Bahana">
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#" class="white-text">Home</a></li>
+        <li><a href="#" class="white-text">About</a></li>
+        <li><a href="#" class="white-text">Products</a></li>
+        <li><a href="#" class="white-text">Services</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#" class="light-blue-text">Home</a></li>
+        <li><a href="#" class="light-blue-text">About</a></li>
+        <li><a href="#" class="light-blue-text">Products</a></li>
+        <li><a href="#" class="light-blue-text">Services</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h1 class="header center white-text">Our Products</h1>
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background02.png" alt="Unsplashed background img 2"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <h4 class="center">Product List</h4>
+    <form method="post" action="">
+      <div class="row">
+        <div class="input-field col s8">
+          <select id="" name="">
+              <option value="1">Show All</option>
+              <option value="2">Industrial Chemicals</option>
+              <option value="3">Water Treatment Chemicals</option>
+              <option value="4">Oil Field Chemicals</option>
+              <option value="5">Electronic Chemicals</option>
+              <option value="6">Agro Chemicals</option>
+              <option value="7">Cleaning Chemicals</option>
+              <option value="8">Resin, Adhesive, Paint and Coating Chemicals</option>
+              <option value="9">Fine Chemicals</option>
+              <option value="10">Construction Chemicals</option>
+              <option value="11">Food and Feed Chemicals</option>
+              <option value="12">Auxilliary Chemicals</option>
+              <option value="13">Speciality Chemicals</option>
+          </select>
+          <label>Choose Product Category</label>
+        </div>
+        <div class="input-field col s4 row left">
+          <button class="btn waves-effect waves-light light-blue darken-4" type="submit" name="action">Search
+            <i class="material-icons right">search</i>
+          </button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <ul class="collection">
+      <li class="collection-item avatar">
+        <img src="conveyor.png" alt="" class="circle">
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="material-icons circle">folder</i>
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="material-icons circle green">insert_chart</i>
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="material-icons circle red">play_arrow</i>
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="material-icons circle red">play_arrow</i>
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="material-icons circle red">play_arrow</i>
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="material-icons circle red">play_arrow</i>
+        <span class="title">Title</span>
+        <p>First Line <br>
+           Second Line
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
