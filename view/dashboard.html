@@ -1,6 +1,5 @@
-https://codepen.io/T-P/pen/MyNjOO
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -11,202 +10,169 @@ https://codepen.io/T-P/pen/MyNjOO
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
-  <nav class="light-blue darken-4 white-text" role="navigation">
+<body id="dashboard-body">
+ 
+  <header>
+    <nav class="light-blue darken-4 white-text" role="navigation">
     <div class="nav-wrapper container white-text">
       <a id="logo-container" href="#" class="brand-logo">
-        <img class="responsive-img" style="margin-top:2.5px; margin-bottom:2.5px;" src="images/logo.png" align="Fradya Bahana">
+        Dashboard
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.html" class="white-text">Home</a></li>
-        <li><a href="#" class="white-text">About</a></li>
-        <li><a href="products.html" class="white-text">Products</a></li>
-        <li><a href="service.html" class="white-text">Services</a></li>
+        
+        <li><a href="#" class="white-text">Home</a></li>
+        <li><a href="service.html" class="white-text">Logout</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="index.html" class="light-blue-text">Home</a></li>
-        <li><a href="#" class="light-blue-text">About</a></li>
-        <li><a href="products.html" class="light-blue-text">Products</a></li>
-        <li><a href="service.html" class="light-blue-text">Services</a></li>
+        <li><a href="#" class="white-text">Home</a></li>
+        <li><a href="service.html" class="white-text">Logout</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <h1 class="header center white-text">Fradya Bahana</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A reliable partner in total chemicals management</h5>
-          <div class="col s12">
-            <div class="row">
-              <form>
-                <div class="col s4"></div>
-                <div class="col s4">
-                  <div class="row">
-                    <div class="col s2">
-                      <div class="file-field input-field">
-                        <div class="btn-floating">
-                          <a>
-                            <i class="material-icons">search</i>
-                          </a>
-                          <input type="hidden">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col s10">
-                      <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Search Products">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col s4"></div>
-              </form>
-            </div>
-          </div>
-        </div><br><br>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/background01.png" alt="Unsplashed background img 1"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/our-products.jpg">
-              <span class="card-title shadow-title" style="text-shadow: 3px 3px 3px #000 !important;">Our Products</span>
-            </div>
-            <div class="card-content">
-              <p>Find detailed informations about our high quality products</p>
-            </div>
-            <div class="card-action">
-              <a href="products.html">Read More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/our-services.jpg">
-              <span class="card-title shadow-title" style="text-shadow: 3px 3px 3px #000 !important;">Our Services</span>
-            </div>
-            <div class="card-content">
-              <p>We provide best quality services for your company</p>
-            </div>
-            <div class="card-action">
-              <a href="service.html">Read More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image shadow-title">
-              <img src="images/about-us.jpg">
-              <span class="card-title" style="text-shadow: 3px 3px 3px #000 !important;">Contact Us</span>
-            </div>
-            <div class="card-content">
-              <p>Find out more about our contact here.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/background02.png" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>About Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/background03.png" alt="Unsplashed background img 3"></div>
-  </div>
-
-  <footer class="page-footer teal">
+  </header>
+  <section id="products-admin">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+      <div style="padding: 30px;" class="card">
+        <h4>Edit Product</h4><br>
+        <a style="margin-bottom: 20px;" class="waves-effect waves-light btn red" href="#" >Add new Product</a>
+        <table class="striped highlight responsive-table">
+        <thead>
+          <tr>
+              <th>Product Name</th>
+              <th>Item Name</th>
+              <th>Item Price</th>
+              <th>Action</th>
+          </tr>
+        </thead>
 
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+            <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+            <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+             <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+             <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a>
+             </td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+            <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+            <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>  
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+             <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+             <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+             <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+             <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="pagination">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          <li class="active"><a href="#!">1</a></li>
+          <li class="waves-effect"><a href="#!">2</a></li>
+          <li class="waves-effect"><a href="#!">3</a></li>
+          <li class="waves-effect"><a href="#!">4</a></li>
+          <li class="waves-effect"><a href="#!">5</a></li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
       </div>
     </div>
+  </section>
+   <section id="service-admin">
+    <div class="container">
+      <div style="padding: 30px;" class="card">
+        <h4>Edit Service</h4><br>
+        <a style="margin-bottom: 20px;" href="#" class="waves-effect waves-red btn red">Add New Service</a>
+
+        <table class="striped highlight responsive-table">
+        <thead>
+          <tr>
+              <th>Product Name</th>
+              <th>Item Name</th>
+              <th>Item Price</th>
+              <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+            <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+            <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+             <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+             <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a>
+             </td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+            <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+            <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>  
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+             <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+             <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+             <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+             <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="pagination">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          <li class="active"><a href="#!">1</a></li>
+          <li class="waves-effect"><a href="#!">2</a></li>
+          <li class="waves-effect"><a href="#!">3</a></li>
+          <li class="waves-effect"><a href="#!">4</a></li>
+          <li class="waves-effect"><a href="#!">5</a></li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class="indigo page-footer">
+    
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        <span>Made By <a style='font-weight: bold;' href="">Tirth Patel</a></span>
       </div>
     </div>
   </footer>
+</body>
 
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
-</html>
+</html></html>

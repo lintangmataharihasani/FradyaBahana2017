@@ -51,6 +51,11 @@ p {
 .icon-block .material-icons {
   font-size: inherit;
 }
+.brand-logo{
+  color: #fff !important; 
+  font-size: 1.6em !important;
+  font-weight: 10px;
+}
 
 footer.page-footer {
   margin: 0;
@@ -68,4 +73,14 @@ footer.page-footer {
     width: 100% !important;
     font-size: 16px !important;
     padding: 12px 20px 12px 40px !important;
+}
+#products-admin{
+  padding-top: 30px;
+}
+
+#service-admin{
+  padding-top: 30px;
+}
+#dashboard-body{
+  background: #dfdfdf;
 }
