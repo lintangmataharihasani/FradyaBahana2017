@@ -39,10 +39,26 @@ p {
   }
 }
 
+#gambarProduk {
+  width: 100%;
+  height: 170px;
+  margin-top: 2%;
+}
+
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
   }
+}
+
+@media only screen and (max-width : 600px) {
+  .resized-text {
+    font-size: 5px;
+  }
+}
+
+#productName {
+  text-align: center;
 }
 
 .icon-block {
@@ -55,6 +71,10 @@ p {
   color: #fff !important; 
   font-size: 1.6em !important;
   font-weight: 10px;
+}
+
+blockquote {
+  text-align: justify;
 }
 
 footer.page-footer {
