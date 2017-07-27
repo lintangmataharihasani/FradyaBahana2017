@@ -32,6 +32,9 @@ p {
 .card-content{
   height: 120px;
 }
+.card-image img{
+  height: 220px;
+}
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -60,6 +63,10 @@ p {
   }
 }
 
+.header-content {
+  margin-top: 100px;
+}
+
 #productName {
   text-align: center;
 }
@@ -78,6 +85,10 @@ p {
 
 blockquote {
   text-align: justify;
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 3px #222 !important;
 }
 
 footer.page-footer {
