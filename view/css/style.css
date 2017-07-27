@@ -25,6 +25,9 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
+.trans-nav{
+  background: transparent;
+}
 
 .parallax-container .section {
   width: 100%;
@@ -34,6 +37,9 @@ p {
 }
 .card-image img{
   height: 220px;
+}
+#index-banner{
+  padding: 20px;
 }
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
