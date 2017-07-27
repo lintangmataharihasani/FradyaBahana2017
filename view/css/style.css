@@ -18,7 +18,9 @@ p {
 .button-collapse {
   color: #26a69a;
 }
-
+.pull-right{
+  margin-left: 11px;
+}
 .parallax-container {
   min-height: 380px;
   line-height: 0;
