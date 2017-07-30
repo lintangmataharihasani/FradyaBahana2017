@@ -1,39 +1,39 @@
 CREATE TABLE produk (
-	nama varchar NOT NULL PRIMARY KEY,
-	deskripsi text,
+	nama VARCHAR(100) PRIMARY KEY,
+	deskripsi TEXT
 );
 
 CREATE TABLE kategori (
-	nama_kategori varchar(100) NOT NULL PRIMARY KEY
+	nama_kategori VARCHAR(100) PRIMARY KEY
 );
 
 CREATE TABLE jenis_produk (
-	nama_produk varchar NOT NULL,
-	concentration int,
-	state varchar,
-	FOREIGN KEY nama_produk REFERENCES produk (nama);
+	nama_produk VARCHAR(100) NOT NULL,
+	concentration INT,
+	state VARCHAR(100),
+	FOREIGN KEY (nama_produk) REFERENCES produk (nama)
 );
 
 CREATE TABLE kategori_produk (
-	nama_produk varchar NOT NULL,
-	nama_kategori varchar(100) NOT NULL,
-	FOREIGN KEY nama_kategori REFERENCES kategori (nama_kategori);
+	nama_produk VARCHAR(100) NOT NULL,
+	nama_kategori VARCHAR(100) NOT NULL,
+	FOREIGN KEY (nama_kategori) REFERENCES kategori (nama_kategori)
 );
 
 CREATE TABLE service (
-	nama varchar NOT NULL PRIMARY KEY,
-	deskripsi text
+	nama VARCHAR(100) PRIMARY KEY,
+	deskripsi TEXT
 );
 
 CREATE TABLE akun (
-	username varchar NOT NULL PRIMARY KEY,
-	password varchar NOT NULL,
-	email varchar
+	username VARCHAR(100) PRIMARY KEY,
+	password VARCHAR(100) NOT NULL,
+	email VARCHAR(100)
 );
 
 CREATE TABLE konten (
-	nama_konten varchar NOT NULL PRIMARY KEY,
-	konten text NOT NULL,
+	nama_konten VARCHAR(100) PRIMARY KEY,
+	konten TEXT NOT NULL
 );
 
 
@@ -96,6 +96,7 @@ INSERT INTO service (nama, deskripsi) VALUES ("Lab and Sample Management", "Lore
 	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.");
 INSERT INTO service (nama, deskripsi) VALUES ("HSE Management", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.");
+
 
 
 
