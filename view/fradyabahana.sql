@@ -19,7 +19,7 @@ CREATE TABLE products (
 CREATE TABLE products_detail (
 		name VARCHAR NOT NULL,
 		id INTEGER NOT NULL,
-		description VARCHAR NOT NULL,
+		description VARCHAR,
 		link_certificate VARCHAR,
 		link_document VARCHAR,
 		FOREIGN KEY id (id) REFERENCES products (id)
