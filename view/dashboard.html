@@ -56,7 +56,36 @@
       <div style="padding: 30px;" class="card">
           <div class="row center">
           <h4>Edit Product</h4><br>
-          <a style="margin-bottom: 20px;" class="waves-effect waves-light btn red" href="#" >Add new Product</a>
+          <a style="margin-bottom: 20px;" class="waves-effect waves-light btn red" href="#addProductModal" >Add new Product</a>
+
+            <div id="addProductModal" class="modal">
+              <div class="modal-content">
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <h4>Add New Products</h4>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
+                        <label for="product_name">Product Name</label>
+                      </div>
+                      <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose category....</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                        <label for="product_category">Product Category</label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a class="waves-effect wave-light btn" href="#">Save</a>
+              </div>
+            </div>
+
           <table class="striped highlight responsive-table centered">
           <thead>
             <tr>
@@ -70,8 +99,35 @@
             <tr>
               <td>Diethanolamine</td>
               <td><a class="waves-effect wave-light btn modal-trigger" href="#modal1">Show</a></td>
-              <td><a class="waves-effect wave-light btn" href="#">Edit</a>
-              <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
+              <td><a class="waves-effect wave-light btn" href="#editProductModal">Edit</a>
+              <div id="editProductModal" class="modal">
+              <div class="modal-content">
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <h4>Edit Product</h4>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
+                        <label for="product_name">Product Name</label>
+                      </div>
+                      <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose category....</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                        <label for="product_category">Product Category</label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a class="waves-effect wave-light btn" href="#">Save</a>
+              </div>
+            </div>
+              <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#deleteProduct">Remove</a></td>
               <!-- Modal Structure -->
               <div id="modal1" class="modal">
                 <div class="modal-content">
@@ -80,6 +136,15 @@
                 </div>
                 <div class="modal-footer">
                   <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+               <div id="deleteProduct" class="modal">
+                <div class="modal-content">
+                  <p>Are you sure you want to remove this product?</p>
+                </div>
+                <div class="modal-footer">
+                  <a class="waves-effect wave-light btn" href="#">Back</a>
+                  <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a>
                 </div>
               </div>
             </tr>
@@ -167,7 +232,29 @@
       <div style="padding: 30px;" class="card">
         <div class="row center">
           <h4>Edit Service</h4><br>
-          <a style="margin-bottom: 20px;" href="#" class="waves-effect waves-red btn red">Add New Service</a>
+          <a style="margin-bottom: 20px;" href="#addServiceModal" class="waves-effect waves-red btn red">Add New Service</a>
+          <div id="addServiceModal" class="modal">
+              <div class="modal-content">
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <h4>Add New Service</h4>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
+                        <label for="product_name">Service Name</label>
+                      </div>
+                      <div class="input-field col s12">
+                          <label for="product_category">Service Description</label>
+                          <textarea id="textarea1" class="materialize-textarea"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a class="waves-effect wave-light btn" href="#">Save</a>
+              </div>
+            </div>
 
           <table class="striped highlight responsive-table centered">
           <thead>
@@ -182,7 +269,29 @@
             <tr>
               <td>Chemicals Supply Management</td>
               <td><a class="waves-effect wave-light btn" href="#">Show</a></td>
-              <td><a class="waves-effect wave-light btn" href="#">Edit</a>
+              <td><a class="waves-effect wave-light btn" href="#editServiceModal">Edit</a>
+              <div id="editServiceModal" class="modal">
+              <div class="modal-content">
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <h4>Edit Service</h4>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
+                        <label for="product_name">Service Name</label>
+                      </div>
+                      <div class="input-field col s12">
+                          <label for="product_category">Service Description</label>
+                          <textarea id="textarea1" class="materialize-textarea"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a class="waves-effect wave-light btn" href="#">Save</a>
+              </div>
+            </div>
               <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
             </tr>
             <tr>
@@ -246,7 +355,7 @@
     <div class="container">
       <div style="padding: 30px;" class="card">
         <div class="row center">
-          <h4>Edit Konten</h4><br>
+          <h4>Edit Content</h4><br>
           <a class="waves-effect wave-light btn" href="#">About Us</a>
           <a class="waves-effect wave-light btn" href="#">Company Bio</a>
         </div>
@@ -256,8 +365,8 @@
   <footer class="indigo page-footer">
     
     <div class="footer-copyright">
-      <div class="container">
-        <span>Made By <a style='font-weight: bold;' href="">Tirth Patel</a></span>
+      <div class="container"><!-- 
+        <span>Made By <a style='font-weight: bold;' href="">Tirth Patel</a></span> -->
       </div>
     </div>
   </footer>
