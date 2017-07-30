@@ -18,8 +18,9 @@ class baseController extends Controller
     public function index(){
         return view('pages.home');
     }
-
-
+    public function dashboard(){
+        return view('pages.dashboard');
+    }
     public function about(){
         return view('pages.about');
     }
