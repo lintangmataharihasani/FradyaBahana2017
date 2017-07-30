@@ -23,7 +23,7 @@
             <div class="collapsible-body"><p>This is second section.</p></div>
          </li>
          <li>
-            <div class="collapsible-header"><img src="images/budget.png" style="width: 30px;height: 30px; margin-top: 10px;" /><span class="pull-right">Chemicals Supply Management</span>               
+            <div class="collapsible-header"><img src="images/budget.png" style="width: 30px;height: 30px; margin-top: 10px;" /><span class="pull-right">Cost Efficiency Management</span>               
             </div>
             <div class="collapsible-body"><p>This is second section.</p></div>
          </li>
@@ -53,7 +53,7 @@
          </li>
          <li>
             <!-- <div class="collapsible-header"><i class="material-icons">filter_drama</i>Chemicals Supply Management</div> -->
-            <div class="collapsible-header"><img src="images/5-stars-sign.png" style="width: 30px;height: 30px; margin-top: 10px;" /><span class="pull-right">Lab and Sample Management</span></div>
+            <div class="collapsible-header"><img src="images/5-stars-sign.png" style="width: 30px;height: 30px; margin-top: 10px;" /><span class="pull-right">Quality Management</span></div>
             <div class="collapsible-body"><p>This is third section.</p></div>
          </li>
 
