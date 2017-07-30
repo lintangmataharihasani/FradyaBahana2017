@@ -1,0 +1,126 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.trans-nav{
+  background: transparent;
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+.card-content{
+  height: 120px;
+}
+.card-image img{
+  height: 220px;
+}
+#index-banner{
+  padding: 20px;
+}
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+#gambarProduk {
+  width: 100%;
+  height: 170px;
+  margin-top: 2%;
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  .resized-text {
+    font-size: 5px;
+  }
+}
+
+.header-content {
+  margin-top: 100px;
+}
+
+#productName {
+  text-align: center;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+.brand-logo{
+  color: #fff !important; 
+  font-size: 1.6em !important;
+  font-weight: 10px;
+}
+
+blockquote {
+  text-align: justify;
+}
+
+.text-shadow {
+  text-shadow: 3px 3px 3px #222 !important;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.shadow-title {
+  text-shadow: 3px 3px 3px #000 !important;
+}
+
+#search {
+  background-image: url(search.png) !important;
+    background-position: 10px 12px !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px !important;
+    width: 100% !important;
+    font-size: 16px !important;
+    padding: 12px 20px 12px 40px !important;
+}
+#products-admin{
+  padding-top: 30px;
+}
+
+#service-admin{
+  padding-top: 30px;
+}
+#dashboard-body{
+  background: #dfdfdf;
+}
