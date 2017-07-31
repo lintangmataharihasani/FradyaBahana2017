@@ -27,23 +27,12 @@ class baseController extends Controller
         return view('pages.about');
     }
     public function products(){
-<<<<<<< HEAD
         $products = DB::table('produk')->simplePaginate(3);
-=======
-<<<<<<< HEAD
-    
-        $products = DB::table('produk')->get();
->>>>>>> 0fa32dd86733f5890fce0986d65215223889e293
         return view('pages.products', ['products' => $products]);
-
-=======
-        $products = DB::table('produk')->get();
-        return view('pages.products', ['products' => $products]);
->>>>>>> 166804aa76d3127c09b7a310a13027472160c7d7
     }
 
     public function services(){
-        $services = DB::table('service')->get();
+        $services = DB::table('service')->simplePaginate(5);
         return view('pages.services', ['services' => $services]);
     }
 
