@@ -184,25 +184,26 @@
           <div id="addServiceModal" class="modal">
               <div class="modal-content">
                 <div class="row">
-                  <form class="col s12" method="post" action="/addService">
+                  <form class="col s12" method="post" action="addService">
                   {{ csrf_field() }}
                     <div class="row">
                       <h4>Add New Service</h4>
                       <div class="input-field col s12">
-                        <input placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
-                        <label for="product_name">Service Name</label>
+                        <input placeholder="ex: Diethanolamine" id="service_name" name="service_name" type="text" class="validate">
+                        <label for="service_name">Service Name</label>
                       </div>
                       <div class="input-field col s12">
-                          <label for="product_category">Service Description</label>
-                          <textarea id="textarea1" class="materialize-textarea"></textarea>
+                          <label for="service_desc">Service Description</label>
+                          <textarea id="textarea1" class="materialize-textarea" name="service_desc" id="service_desc"></textarea>
                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <input type="submit" class="waves-effect wave-light btn"></input>
                     </div>
                   </form>
                 </div>
               </div>
-              <div class="modal-footer">
-                <a class="waves-effect wave-light btn" href="#">Save</a>
-              </div>
+              
             </div>
 
           <table class="striped highlight responsive-table centered">

@@ -25,20 +25,19 @@ class baseController extends Controller
         return view('pages.about');
     }
     public function products(){
-<<<<<<< HEAD
         $products = DB::table('produk')->get();
         return view('pages.products', ['products' => $products]);
-=======
-        $productData = DB::select('SELECT * FROM PRODUK');
-        return view('pages.products', ['productData' => $productData]);
->>>>>>> 9afaeabdae3a2bc770851c37a4524bd330c036cb
     }
+
     public function services(){
         $services = DB::table('service')->get();
         return view('pages.services', ['services' => $services]);
     }
 
-    public function addService() {
-        
+    public function addService(Request $request) {
+        $serviceName = $request->input('service_name');
+        $serviceDesc = $request->input('service_desc');
+        DB::table('service')->insert(['nama'=> $serviceName, 'deskripsi'=>$serviceDesc]);
+        return view('pages.dashboard');
     }
 }
