@@ -26,16 +26,9 @@ class baseController extends Controller
     public function about(){
         return view('pages.about');
     }
-    public function products(){
-<<<<<<< HEAD
-    
+    public function products(){    
         $products = DB::table('produk')->get();
         return view('pages.products', ['products' => $products]);
-
-=======
-        $products = DB::table('produk')->get();
-        return view('pages.products', ['products' => $products]);
->>>>>>> 166804aa76d3127c09b7a310a13027472160c7d7
     }
 
     public function services(){
