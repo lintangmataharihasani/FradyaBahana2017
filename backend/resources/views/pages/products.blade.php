@@ -59,35 +59,7 @@
 </p>
 <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
 </li>
-<!-- <li class="collection-item avatar">
-<img src="images/detergent.png" alt="" class="circle">
-<span class="title"><strong>Diethylethanolamine</strong></span>
-<p>Diethylethanolamine (DEEA) belongs to the class of aminoalcohols . It is a colorless to yellow liquid with an aminelike odor and is miscible in water. It is a versatile intermediate with a variety of applications.
-</p>
-<a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
-</li>
-<li class="collection-item avatar">
-<img src="images/oil.png" alt="" class="circle">
-<span class="title"><strong>Monoethanolamine</strong></span>
-<p>First Line <br>
-   Monoethanolamine belongs to the class of ethanolamines. Among many other applications it is mainly used in the production of wood-treatment chemicals, detergents and surfactants.
-</p>
-<a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
-</li>
-<li class="collection-item avatar">
-<img src="images/detergent.png" alt="" class="circle">
-<span class="title"><strong>N,N-Dimethylethanolamine S</strong></span>
-<p>N,N-Dimethylethanolamine S (DMEOA, DMAE) belongs to the class of N-alkylated aminoalcohols. DMEOA is a colorless to slightly yellow liquid with a amine-like odor.
-</p>
-<a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
-</li>
-<li class="collection-item avatar">
-<img src="images/three-test-tubes.png" alt="" class="circle">
-<span class="title"><strong>Triethanolamine</strong></span>
-<p> Triethanolamine belongs to the class of ethanolamines. Among many other applications it is mainly used in the production of fabric softeners.
-</p>
-<a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
-</li> -->
+
 @endforeach
 </ul>
 <ul class="pagination center">
