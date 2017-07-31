@@ -4,7 +4,7 @@
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container header-content">
-        <h1 class="header center white-text text-shadow">Fradya Bahana</h1>
+        <h1 class="header center white-text text-shadow">Fradya Bahana Innovation</h1>
         <div class="row center">
           <h5 class="header col s12 light text-shadow">A reliable partner in total chemicals management</h5>
         </div>

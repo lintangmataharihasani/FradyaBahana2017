@@ -202,8 +202,7 @@
                     </div>
                   </form>
                 </div>
-              </div>
-              
+              </div>            
             </div>
 
           <table class="striped highlight responsive-table centered">

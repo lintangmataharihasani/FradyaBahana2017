@@ -25,7 +25,7 @@ class baseController extends Controller
         return view('pages.about');
     }
     public function products(){
-        $products = DB::table('produk')->get();
+        $products = DB::table('produk')->simplePaginate(3);
         return view('pages.products', ['products' => $products]);
     }
 
