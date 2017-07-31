@@ -28,12 +28,16 @@ class baseController extends Controller
         $products = DB::table('produk')->get();
         return view('pages.products', ['products' => $products]);
     }
+
     public function services(){
         $services = DB::table('service')->get();
         return view('pages.services', ['services' => $services]);
     }
 
-    public function addService() {
-        
+    public function addService(Request $request) {
+        $serviceName = $request->input('service_name');
+        $serviceDesc = $request->input('service_desc');
+        DB::table('service')->insert(['nama'=> $serviceName, 'deskripsi'=>$serviceDesc]);
+        return view('pages.dashboard');
     }
 }
