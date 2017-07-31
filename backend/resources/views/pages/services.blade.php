@@ -23,6 +23,10 @@
             </div>
             <div class="collapsible-body"><p>{{ $service->deskripsi}}</p></div>
          </li>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 0fa32dd86733f5890fce0986d65215223889e293
          @endforeach
       </ul>
         <ul class="pagination">

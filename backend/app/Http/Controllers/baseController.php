@@ -19,14 +19,27 @@ class baseController extends Controller
         return view('pages.home');
     }
     public function dashboard(){
-        return view('pages.dashboard');
+        $products = DB::table('produk')->get();
+        $services = DB::table('service')->get();
+        return view('pages.dashboard',['products'=> $products], ['services'=>$services]);
     }
     public function about(){
         return view('pages.about');
     }
     public function products(){
+<<<<<<< HEAD
         $products = DB::table('produk')->simplePaginate(3);
+=======
+<<<<<<< HEAD
+    
+        $products = DB::table('produk')->get();
+>>>>>>> 0fa32dd86733f5890fce0986d65215223889e293
         return view('pages.products', ['products' => $products]);
+
+=======
+        $products = DB::table('produk')->get();
+        return view('pages.products', ['products' => $products]);
+>>>>>>> 166804aa76d3127c09b7a310a13027472160c7d7
     }
 
     public function services(){
@@ -38,6 +51,10 @@ class baseController extends Controller
         $serviceName = $request->input('service_name');
         $serviceDesc = $request->input('service_desc');
         DB::table('service')->insert(['nama'=> $serviceName, 'deskripsi'=>$serviceDesc]);
-        return view('pages.dashboard');
+        return redirect('dashboard');
+    }
+
+    public function details(){
+        return view('pages.details');
     }
 }
