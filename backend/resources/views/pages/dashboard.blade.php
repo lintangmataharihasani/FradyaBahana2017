@@ -6,8 +6,7 @@
           <div class="row center">
           <h4>Edit Product</h4><br>
           <a style="margin-bottom: 20px;" class="waves-effect waves-light btn red" href="#addProductModal" >Add new Product</a>
-
-            <div id="addProductModal" class="modal">
+           <div id="addProductModal" class="modal">
               <div class="modal-content">
                 <div class="row">
                   <form class="col s12">
@@ -185,7 +184,8 @@
           <div id="addServiceModal" class="modal">
               <div class="modal-content">
                 <div class="row">
-                  <form class="col s12">
+                  <form class="col s12" method="post" action="/addService">
+                  {{ csrf_field() }}
                     <div class="row">
                       <h4>Add New Service</h4>
                       <div class="input-field col s12">

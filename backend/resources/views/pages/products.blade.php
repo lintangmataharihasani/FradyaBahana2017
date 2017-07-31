@@ -50,14 +50,16 @@
 <div class="container">
 <div class="section">
 <ul class="collection">
+@foreach ($products as $product)
 <li class="collection-item avatar">
 <img src="images/conveyor.png" alt="" class="circle">
-<span class="title"><strong>Diethanolamine</strong></span>
-<p>Diethanolamine belongs to the class of ethanolamines. Among many other applications it is mainly used in the production of agrochemicals, detergents and surfactants.
+<span class="title"><strong>{{ $product->nama}}</strong></span>
+<p>
+{{ $product->deskripsi}}
 </p>
 <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
 </li>
-<li class="collection-item avatar">
+<!-- <li class="collection-item avatar">
 <img src="images/detergent.png" alt="" class="circle">
 <span class="title"><strong>Diethylethanolamine</strong></span>
 <p>Diethylethanolamine (DEEA) belongs to the class of aminoalcohols . It is a colorless to yellow liquid with an aminelike odor and is miscible in water. It is a versatile intermediate with a variety of applications.
@@ -85,7 +87,8 @@
 <p> Triethanolamine belongs to the class of ethanolamines. Among many other applications it is mainly used in the production of fabric softeners.
 </p>
 <a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
-</li>
+</li> -->
+@endforeach
 </ul>
 <ul class="pagination center">
 <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>

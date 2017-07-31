@@ -28,7 +28,7 @@
               <p>Find detailed informations about our high quality products</p>
             </div>
             <div class="card-action">
-              <a href="products.html">Read More</a>
+              <a href="products">Read More</a>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
               <p>We provide best quality services for your company</p>
             </div>
             <div class="card-action">
-              <a href="service.html">Read More</a>
+              <a href="services">Read More</a>
             </div>
           </div>
         </div>

@@ -25,12 +25,15 @@ class baseController extends Controller
         return view('pages.about');
     }
     public function products(){
-        return view('pages.products');
+        $products = DB::table('produk')->get();
+        return view('pages.products', ['products' => $products]);
     }
     public function services(){
         $services = DB::table('service')->get();
         return view('pages.services', ['services' => $services]);
     }
 
-
+    public function addService() {
+        
+    }
 }
