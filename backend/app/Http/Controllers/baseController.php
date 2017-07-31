@@ -19,7 +19,9 @@ class baseController extends Controller
         return view('pages.home');
     }
     public function dashboard(){
-        return view('pages.dashboard');
+        $products = DB::table('produk')->get();
+        $services = DB::table('service')->get();
+        return view('pages.dashboard',['products'=> $products], ['services'=>$services]);
     }
     public function about(){
         return view('pages.about');
@@ -38,6 +40,6 @@ class baseController extends Controller
         $serviceName = $request->input('service_name');
         $serviceDesc = $request->input('service_desc');
         DB::table('service')->insert(['nama'=> $serviceName, 'deskripsi'=>$serviceDesc]);
-        return view('pages.dashboard');
+        return redirect('dashboard');
     }
 }
