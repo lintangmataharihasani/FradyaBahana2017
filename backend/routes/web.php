@@ -17,3 +17,4 @@ Route::get('/about','baseController@about');
 Route::get('/products','baseController@products');
 Route::get('/services','baseController@services');
 Route::get('/dashboard','baseController@dashboard');
+Route::get('/details', 'baseController@details');
