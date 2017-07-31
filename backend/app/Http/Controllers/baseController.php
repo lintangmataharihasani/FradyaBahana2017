@@ -25,7 +25,8 @@ class baseController extends Controller
         return view('pages.about');
     }
     public function products(){
-        return view('pages.products');
+        $productData = DB::select('SELECT * FROM PRODUK');
+        return view('pages.products', ['productData' => $productData]);
     }
     public function services(){
         return view('pages.services');
