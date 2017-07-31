@@ -26,8 +26,18 @@ class baseController extends Controller
     public function about(){
         return view('pages.about');
     }
+<<<<<<< HEAD
     public function products(){    
+=======
+    public function products(){
+<<<<<<< HEAD
+        $products = DB::table('produk')->simplePaginate(3);
+=======
+<<<<<<< HEAD
+    
+>>>>>>> d086b30f1a3624168d8bafd68e0231f5a75f59ad
         $products = DB::table('produk')->get();
+>>>>>>> 0fa32dd86733f5890fce0986d65215223889e293
         return view('pages.products', ['products' => $products]);
     }
 
