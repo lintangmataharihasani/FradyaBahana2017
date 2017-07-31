@@ -59,7 +59,7 @@ INSERT INTO produk (nama, deskripsi) VALUES ("Diethylethanolamine", "Lorem ipsum
 	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.");
 INSERT INTO produk (nama, deskripsi) VALUES ("Monoethanolamine", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.");
-INSERT INTO produk (nama, deskripsi) VALUES ("N,N-Dimethylethanolamine S", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+INSERT INTO produk (nama, deskripsi) VALUES ("N-Dimethylethanolamine S", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.");
 INSERT INTO produk (nama, deskripsi) VALUES ("Triethanolamine", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.");
