@@ -47,4 +47,9 @@ class baseController extends Controller
     public function details(){
         return view('pages.details');
     }
+
+    public function deleteService(Request $request) {
+        $serviceName = $request->input('service_name');
+        DB::table('service')->where('nama','>')
+    }
 }

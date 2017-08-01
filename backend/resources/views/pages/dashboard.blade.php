@@ -48,9 +48,51 @@
             @foreach ($products as $product)
               <tr>
               <td>{{$product->nama}}</td>
-              <td><a class="waves-effect wave-light btn modal-trigger" href="#modal1">Show</a></td>
-              <td><a class="waves-effect wave-light btn" href="#editProductModal">Edit</a>
-             
+              <td><a class="waves-effect wave-light btn modal-trigger" href="#show{{ $product->nama}}".>Show</a></td>
+              
+              <div id="show{{ $product->nama}}" class="modal">
+                <div class="modal-content">
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <h4>{{$product->nama}}</h4>
+                        <p>{{$product->deskripsi}}</p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                   <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+             </div>
+
+              <td><a class="waves-effect wave-light btn" href="#edit{{ $product->nama}}">Edit</a>
+              <div id="edit{{ $product->nama}}" class="modal">
+                <div class="modal-content">
+                  <div class="row">
+                    <form class="col s12">
+                      <h4>Edit Product</h4>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
+                        <label for="product_name">Product Name</label>
+                      </div>
+                      <div class="input-field col s12">
+                            <select>
+                              <option value="" disabled selected>Choose category....</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                        <label for="product_category">Product Category</label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                   <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+                </div>
+             </div>
+
               <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#deleteProduct">Remove</a></td>
            
             </tr>
@@ -115,13 +157,49 @@
             @foreach ($services as $service)
               <tr>
               <td>{{$service->nama}}</td>
-              <td><a class="waves-effect wave-light btn" href="#">Show</a></td>
-              <td><a class="waves-effect wave-light btn" href="#editServiceModal">Edit</a>
+              <td><a class="waves-effect wave-light btn" href="#show{{ $service->nama}}">Show</a></td>
+
+              <div id="show{{ $service->nama}}" class="modal">
+                <div class="modal-content">
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <h4>{{$service->nama}}</h4>
+                        <p>{{$service->deskripsi}}</p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                   <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+             </div>
+
+              <td><a class="waves-effect wave-light btn" href="#edit{{ $product->nama}}">Edit</a>
               <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
-              </tr>
-            @endforeach
-            
-          
+
+              <div id="edit{{ $product->nama}}" class="modal">
+                <div class="modal-content">
+                  <div class="row">
+                    <form class="col s12">
+                      <h4>Edit Service</h4>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: Chemicals Supply Management" id="service_name_edit" type="text" class="validate">
+                        <label for="product_name">Service Name</label>
+                      </div>
+                      <div class="input-field col s12">
+                          <label for="service_desc">Service Description</label>
+                          <textarea id="textarea1" class="materialize-textarea" name="service_desc_edit" id="service_desc"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                   <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+                </div>
+             </div>
+             </tr>
+            @endforeach    
           </tbody>
         </table>
         <ul class="pagination">
