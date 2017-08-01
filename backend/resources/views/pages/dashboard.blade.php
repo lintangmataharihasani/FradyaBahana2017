@@ -175,29 +175,28 @@
                 </div>
              </div>
 
-              <td><a class="waves-effect wave-light btn" href="#edit{{ $product->nama}}">Edit</a>
+              <td><a class="waves-effect wave-light btn" href="#edit{{ $service->nama}}">Edit</a>
               <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
 
-              <div id="edit{{ $product->nama}}" class="modal">
+              <div id="edit{{ $service->nama}}" class="modal">
                 <div class="modal-content">
                   <div class="row">
-                    <form class="col s12">
-                      <h4>Edit Service</h4>
-                      <div class="input-field col s12">
-                        <input placeholder="ex: Chemicals Supply Management" id="service_name_edit" type="text" class="validate">
-                        <label for="product_name">Service Name</label>
+                   <form action="editService" method="post">
+                   {{ csrf_field() }}
+                      <div class="row">
+                        <input type="hidden" name="service_name_edit" value="{{ $service->nama}}">
+                        <div class="input-field col s12" >
+                            <label for="service_desc_edit">Service Description</label>
+                            <textarea id="service_desc_edit" name="service_desc_edit" class="materialize-textarea"></textarea> 
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="submit" class="btn">
+                        </div>
                       </div>
-                      <div class="input-field col s12">
-                          <label for="service_desc">Service Description</label>
-                          <textarea id="textarea1" class="materialize-textarea" name="service_desc_edit" id="service_desc"></textarea>
-                      </div>
-                    </form>
+                   </form>    
                   </div>
                 </div>
-                <div class="modal-footer">
-                   <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
-                </div>
-             </div>
+              </div>
              </tr>
             @endforeach    
           </tbody>
@@ -219,9 +218,68 @@
     <div class="container">
       <div style="padding: 30px;" class="card">
         <div class="row center">
-          <h4>Edit Content</h4><br>
-          <a class="waves-effect wave-light btn" href="#">About Us</a>
-          <a class="waves-effect wave-light btn" href="#">Company Bio</a>
+          <h4>Content Manager</h4><br>
+
+          <table class="striped highlight responsive-table centered">
+          <thead>
+            <tr>
+                <th>Content Name</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            
+            @foreach ($contents as $content)
+              <tr>
+              <td>{{$content->nama_konten}}</td>
+              <td><a class="waves-effect wave-light btn modal-trigger" href="#show{{ $content->nama_konten}}".>Show</a></td>
+              
+              <div id="show{{ $content->nama_konten}}" class="modal">
+                <div class="modal-content">
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <h4>{{$content->nama_konten}}</h4>
+                        <p>{{$content->konten}}</p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                   <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+
+              <td><a class="waves-effect wave-light btn" href="#edit{{ $content->nama_konten}}">Edit</a></td>
+
+                <div id="edit{{ $content->nama_konten}}" class="modal">
+                  <div class="modal-content">
+                    <div class="row">
+                      <form action="editContent" method="post">
+                        {{ csrf_field() }}
+                        <div class="row">
+                          <input type="hidden" name="content_name_edit" value="{{ $content->nama_konten}}">
+                          <div class="input-field col s12">
+                            <label for="content_desc_edit">Content Description</label>
+                            <textarea id="content_desc_edit" name="content_desc_edit" class="materialize-textarea"></textarea> 
+                          </div>
+                          <div class="input-field col s12">
+                            <input type="submit" class="btn">
+                          </div>
+                        </div>
+                      </form>    
+                    </div>
+                  </div>
+                </div>
+
+            </tr>
+            @endforeach
+          
+          </tbody>
+        </table>
+
         </div>
       </div>
     </div>

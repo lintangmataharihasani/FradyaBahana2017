@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row center">
           <h1 class="header center white-text">Our Services</h1>
-          <h5 class="header col s12 light">We provide high quality services for your industry</h5>
+          <h5 class="header col s12 light">{{$header_tagline}}</h5>
         </div>
       </div>
     </div>

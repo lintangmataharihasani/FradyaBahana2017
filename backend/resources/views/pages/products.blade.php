@@ -5,7 +5,7 @@
 <div class="container">
 <div class="row center">
   <h1 class="header center white-text">Our Products</h1>
-  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+  <h5 class="header col s12 light">{{$header_tagline}}</h5>
 </div>
 </div>
 </div>
