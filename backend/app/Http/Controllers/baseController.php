@@ -22,6 +22,11 @@ class baseController extends Controller
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         return view('pages.home', ['about'=>$about, 'header_tagline'=>$header_tagline, 'section_tagline'=>$section_tagline]);
     }
+
+    public function login() {
+        return view('pages.login');
+    }
+
     public function dashboard(){
         $products = DB::table('produk')->get();
         $services = DB::table('service')->get();
@@ -65,7 +70,6 @@ class baseController extends Controller
         DB::table('service')
                 ->where('nama', $serviceName)
                 ->update(array('deskripsi' => $serviceDesc));
-       // DB::table('service')->insert(['nama'=> $serviceName, 'deskripsi'=>$serviceDesc]);
         return redirect('dashboard');
     }
 
@@ -89,6 +93,21 @@ class baseController extends Controller
                 ->update(array('konten' => $contentDesc));
        // DB::table('service')->insert(['nama'=> $serviceName, 'deskripsi'=>$serviceDesc]);
         return redirect('dashboard');
+    }
+
+    public function loginAdmin(Request $request) {
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        $account = DB::table('akun')->where('email',$email)->count();
+        $passwordDB = DB::table('akun')->where('email',$email)->value('password');
+
+        if ($account==1 && $passwordDB==$password) {
+            $request->session()->put('users', '$email');
+            return redirect('dashboard');
+        } else {
+
+        }
     }
 
 }
