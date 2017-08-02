@@ -75,6 +75,12 @@ class baseController extends Controller
         return redirect('dashboard');
     }
 
+    public function deleteProduct(Request $request) {
+        $productName = $request->input('product_name_delete');
+        DB::table('produk')->where('nama','=',$productName)->delete();
+        return redirect('dashboard');
+    }
+
     public function editContent(Request $request) {
         $contentName = $request->input('content_name_edit');
         $contentDesc = $request->input('content_desc_edit');
