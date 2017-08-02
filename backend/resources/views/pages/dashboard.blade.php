@@ -70,27 +70,48 @@
               <div id="edit{{ $product->nama}}" class="modal">
                 <div class="modal-content">
                   <div class="row">
-                    <form class="col s12">
+                    <form class="col s12" action="editProduct" method="post">
+                      {{ csrf_field() }}
                       <h4>Edit Product</h4>
                       <div class="input-field col s12">
-                        <input placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
-                        <label for="product_name">Product Name</label>
+                        <input id="product_name" name="nama" type="hidden" value="{{$product->nama}}">
+                        <blockquote>Harap Mengisi Data Produk Secara Lengkap</blockquote>
+                      </div>
+                      <!--<div class="input-field col s12">
+                        <select name="kategori" id="product_category" multiple>
+                          <option value="" disabled selected>Silahkan pilih kategori produk</option>
+                          <option value="Industrial Chemicals">Industrial Chemicals</option>
+                          <option value="Water Treatment Chemicals">Water Treatment Chemicals</option>
+                          <option value="Oil Field Chemicals">Oil Field Chemicals</option>
+                          <option value="Electronic Chemicals">Electronic Chemicals</option>
+                          <option value="Agro Chemicals">Agro Chemicals</option>
+                          <option value="Cleaning Chemicals">Cleaning Chemicals</option>
+                          <option value="Resin, Adhesive, Paint, and Coating Chemicals">Resin, Adhesive, Paint, and Coating Chemicals</option>
+                          <option value="Fine Chemicals">Fine Chemicals</option>
+                          <option value="Construction Chemicals">Construction Chemicals</option>
+                          <option value="Food and Feed Chemicals">Food and Feed Chemicals</option>
+                          <option value="Auxiuliary Chemicals">Auxiuliary Chemicals</option>
+                          <option value="Specialty Chemicals">Specialty Chemicals</option>
+                        </select>
+                        <label for="product_category">Product Category</label>
+                      </div>-->
+                      <div class="input-field col s12">
+                        <textarea id="deskripsi" name="deskripsi" class="materialize-textarea"></textarea> 
+                        <label for="deskripsi">Description</label>
                       </div>
                       <div class="input-field col s12">
-                            <select>
-                              <option value="" disabled selected>Choose category....</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
-                            </select>
-                        <label for="product_category">Product Category</label>
+                        <input placeholder="ex: Liquid" id="state" name="state" type="hidden" value="{{$product->state}}" class="validate">
+                      </div>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: 70" id="concentration" name="concentration" type="hidden" value="{{$product->concentration}}" class="validate">
+                      </div>
+                      <div class="modal-footer">
+                         <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
                       </div>
                     </form>
                   </div>
                 </div>
-                <div class="modal-footer">
-                   <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
-                </div>
+
              </div>
 
               <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#delete{{ $product->nama}}">Remove</a></td>
@@ -218,7 +239,7 @@
                    {{ csrf_field() }}
                         <input type="hidden" name="service_name_delete" value="{{ $service->nama}}">
                         <div class="container row left" style="margin-bottom: 12px;">
-                          <div class="row">
+                          <div class="row center">
                             <div class="col s12 m4 l2">
                               <i class="red-text medium material-icons">error_outline</i> 
                             </div>

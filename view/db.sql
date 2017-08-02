@@ -81,8 +81,6 @@ INSERT INTO jenis_produk (nama_produk, concentration, state) VALUES ("Monoethano
 INSERT INTO jenis_produk (nama_produk, concentration, state) VALUES ("Monoethanolamine", 25, "Liquid");
 INSERT INTO jenis_produk (nama_produk, state) VALUES ("N-Dimethylethanolamine S", "Crystal");
 INSERT INTO jenis_produk (nama_produk, state) VALUES ("N-Dimethylethanolamine S", "Solid");
-INSERT INTO jenis_produk (nama_produk, concentration, state) VALUES ("N,N-Dimethylethanolamine", 75, "Gel");
-INSERT INTO jenis_produk (nama_produk, state) VALUES ("Triethanolamine", "Solid");
 
 INSERT INTO service (nama, deskripsi) VALUES ("Chemicals Supply Management", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.");

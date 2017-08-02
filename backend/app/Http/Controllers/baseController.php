@@ -51,6 +51,25 @@ class baseController extends Controller
         return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about]);
     }
 
+    public function editProduct(Request $request){
+        $nama = $request->input('nama');
+        //$kategori = $request->input('kategori');
+        $deskripsi = $request->input('deskripsi');
+        $state = $request->input('state');
+        $concentration = $request->input('concentration');
+        
+        DB::table('produk')
+                ->where('nama', $nama)
+                ->where('state', $state)
+                ->where('concentration', $concentration)
+                ->update(array('deskripsi' => $deskripsi));
+        return redirect('dashboard');
+
+    }
+    public function tes(){
+        return view('pages.tes');
+    }
+
     public function services(){
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Service')->value('konten');
