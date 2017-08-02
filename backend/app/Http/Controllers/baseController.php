@@ -134,5 +134,8 @@ class baseController extends Controller
             return redirect('login');    
         }
     }
-
+    public function logout(Request $request){
+        $request->session()->flush();
+        return redirect('home');   
+    }
 }

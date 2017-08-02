@@ -14,6 +14,7 @@
 Route::get('/','baseController@index');
 Route::get('/home','baseController@index');
 Route::get('/about','baseController@about');
+Route::get('/logout','baseController@logout');
 Route::get('/products','baseController@products');
 Route::get('/tes','baseController@tes');
 Route::get('/services','baseController@services');
@@ -25,8 +26,5 @@ Route::post('/editService', 'baseController@editService');
 Route::post('/deleteService', 'baseController@deleteService');
 Route::post('/deleteProduct', 'baseController@deleteProduct');
 Route::post('/editContent', 'baseController@editContent');
-<<<<<<< HEAD
 Route::post('/editProduct', 'baseController@editProduct');
-=======
 Route::post('/login', 'baseController@loginAdmin');
->>>>>>> 4493aa7f1bc4aa2fa7464154a08b8ef9336dc3c5
