@@ -22,11 +22,16 @@ class baseController extends Controller
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         return view('pages.home', ['about'=>$about, 'header_tagline'=>$header_tagline, 'section_tagline'=>$section_tagline]);
     }
-    public function dashboard(){
-        $products = DB::table('produk')->get();
-        $services = DB::table('service')->get();
-        $contents = DB::table('konten')->get();
-        return view('pages.dashboard',['products'=> $products, 'services'=>$services, 'contents'=>$contents]);
+    public function dashboard(Request $request){
+        if($request->session()->has('users')){
+            $products = DB::table('produk')->get();
+            $services = DB::table('service')->get();
+            $contents = DB::table('konten')->get();
+            return view('pages.dashboard',['products'=> $products, 'services'=>$services, 'contents'=>$contents]);    
+        }else{
+            return redirect('home');
+        }
+        
     }
     public function about(){
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
