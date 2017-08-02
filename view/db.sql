@@ -11,13 +11,13 @@ CREATE TABLE jenis_produk (
 	nama_produk VARCHAR(100) NOT NULL,
 	concentration INT,
 	state VARCHAR(100),
-	FOREIGN KEY (nama_produk) REFERENCES produk (nama)
+	FOREIGN KEY (nama_produk) REFERENCES produk (nama) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE kategori_produk (
 	nama_produk VARCHAR(100) NOT NULL,
 	nama_kategori VARCHAR(100) NOT NULL,
-	FOREIGN KEY (nama_kategori) REFERENCES kategori (nama_kategori)
+	FOREIGN KEY (nama_kategori) REFERENCES kategori (nama_kategori) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE service (
