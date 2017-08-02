@@ -19,9 +19,14 @@ Route::get('/tes','baseController@tes');
 Route::get('/services','baseController@services');
 Route::get('/dashboard','baseController@dashboard');
 Route::get('/details', 'baseController@details');
+Route::get('/admin-login','baseController@login');
 Route::post('/addService', 'baseController@addService');
 Route::post('/editService', 'baseController@editService');
 Route::post('/deleteService', 'baseController@deleteService');
 Route::post('/deleteProduct', 'baseController@deleteProduct');
 Route::post('/editContent', 'baseController@editContent');
+<<<<<<< HEAD
 Route::post('/editProduct', 'baseController@editProduct');
+=======
+Route::post('/login', 'baseController@loginAdmin');
+>>>>>>> 4493aa7f1bc4aa2fa7464154a08b8ef9336dc3c5
