@@ -70,8 +70,9 @@ class baseController extends Controller
     }
 
     public function deleteService(Request $request) {
-        $serviceName = $request->input('service_name');
-        // DB::table('service')->where('nama','>')
+        $serviceName = $request->input('service_name_delete');
+        DB::table('service')->where('nama','=',$serviceName)->delete();
+        return redirect('dashboard');
     }
 
     public function editContent(Request $request) {

@@ -20,4 +20,5 @@ Route::get('/dashboard','baseController@dashboard');
 Route::get('/details', 'baseController@details');
 Route::post('/addService', 'baseController@addService');
 Route::post('/editService', 'baseController@editService');
+Route::post('/deleteService', 'baseController@deleteService');
 Route::post('/editContent', 'baseController@editContent');

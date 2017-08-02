@@ -93,8 +93,20 @@
                 </div>
              </div>
 
-              <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#deleteProduct">Remove</a></td>
-           
+              <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#delete{{ $product->nama}}">Remove</a></td>
+              <div id="delete{{ $product->nama}}" class="modal">
+                <div class="modal-content">
+                  <div class="row">
+                    <form class="col s12">
+                      <h4>Delete Product</h4>
+                      <p>Are you sure you want to delete this product?</p>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                   <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+                </div>
+             </div>
             </tr>
             @endforeach
           
@@ -176,7 +188,7 @@
              </div>
 
               <td><a class="waves-effect wave-light btn" href="#edit{{ $service->nama}}">Edit</a>
-              <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#">Remove</a></td>
+              <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#delete{{ $service->nama}}">Remove</a></td>
 
               <div id="edit{{ $service->nama}}" class="modal">
                 <div class="modal-content">
@@ -193,6 +205,21 @@
                             <input type="submit" class="btn">
                         </div>
                       </div>
+                   </form>    
+                  </div>
+                </div>
+              </div>
+
+              <div id="delete{{ $service->nama}}" class="modal">
+                <div class="modal-content">
+                  <div class="row">
+                   <form action="deleteService" method="post">
+                   {{ csrf_field() }}
+                      <div class="row">
+                        <input type="hidden" name="service_name_delete" value="{{ $service->nama}}">
+                        <p>Are you sure you want to remove this service?</p>
+                      </div>
+                      <button type="submit" class="waves-effect wave-light btn red">Remove</button>
                    </form>    
                   </div>
                 </div>
