@@ -25,8 +25,5 @@ Route::post('/editService', 'baseController@editService');
 Route::post('/deleteService', 'baseController@deleteService');
 Route::post('/deleteProduct', 'baseController@deleteProduct');
 Route::post('/editContent', 'baseController@editContent');
-<<<<<<< HEAD
 Route::post('/editProduct', 'baseController@editProduct');
-=======
 Route::post('/login', 'baseController@loginAdmin');
->>>>>>> 4493aa7f1bc4aa2fa7464154a08b8ef9336dc3c5

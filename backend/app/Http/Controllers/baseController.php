@@ -22,7 +22,7 @@ class baseController extends Controller
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         return view('pages.home', ['about'=>$about, 'header_tagline'=>$header_tagline, 'section_tagline'=>$section_tagline]);
     }
-<<<<<<< HEAD
+
     public function dashboard(Request $request){
         if($request->session()->has('users')){
             $products = DB::table('produk')->get();
@@ -32,20 +32,12 @@ class baseController extends Controller
         }else{
             return redirect('home');
         }
+    }
         
-=======
-
     public function login() {
         return view('pages.login');
     }
 
-    public function dashboard(){
-        $products = DB::table('produk')->get();
-        $services = DB::table('service')->get();
-        $contents = DB::table('konten')->get();
-        return view('pages.dashboard',['products'=> $products, 'services'=>$services, 'contents'=>$contents]);
->>>>>>> 8291a7c4d7f2261f87e4f59e71c8cd28f0ed31fd
-    }
     public function about(){
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         return view('pages.about', ['about'=>$about]);
@@ -138,7 +130,7 @@ class baseController extends Controller
             $request->session()->put('users', '$email');
             return redirect('dashboard');
         } else {
-
+            return view('pages.login');
         }
     }
 
