@@ -33,11 +33,19 @@ class baseController extends Controller
             return redirect('home');
         }
     }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 67cc38d3a2ddd7884a2e1bf96f3b63311f52b4b9
     public function login() {
         return view('pages.login');
     }
 
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 67cc38d3a2ddd7884a2e1bf96f3b63311f52b4b9
     public function about(){
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         return view('pages.about', ['about'=>$about]);
@@ -130,8 +138,15 @@ class baseController extends Controller
             $request->session()->put('users', '$email');
             return redirect('dashboard');
         } else {
+<<<<<<< HEAD
             return view('pages.login');
+=======
+            return redirect('login');    
+>>>>>>> 67cc38d3a2ddd7884a2e1bf96f3b63311f52b4b9
         }
     }
-
+    public function logout(Request $request){
+        $request->session()->flush();
+        return redirect('home');   
+    }
 }
