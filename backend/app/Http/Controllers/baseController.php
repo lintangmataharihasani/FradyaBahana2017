@@ -16,11 +16,15 @@ use Log;
 
 class baseController extends Controller
 {
-    public function index(){
-        $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Home')->value('konten');
-        $section_tagline = DB::table('konten')->where('nama_konten', 'Tagline Section Home')->value('konten');
-        $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
-        return view('pages.home', ['about'=>$about, 'header_tagline'=>$header_tagline, 'section_tagline'=>$section_tagline]);
+    public function index(Request $request){
+        if($request->session()->has('users')){
+            return redirect('dashboard');
+        }else{
+            $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Home')->value('konten');
+            $section_tagline = DB::table('konten')->where('nama_konten', 'Tagline Section Home')->value('konten');
+            $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
+            return view('pages.home', ['about'=>$about, 'header_tagline'=>$header_tagline, 'section_tagline'=>$section_tagline]);     
+        }  
     }
 
     public function dashboard(Request $request){
@@ -33,19 +37,11 @@ class baseController extends Controller
             return redirect('home');
         }
     }
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> 67cc38d3a2ddd7884a2e1bf96f3b63311f52b4b9
     public function login() {
         return view('pages.login');
     }
 
-<<<<<<< HEAD
-=======
- 
->>>>>>> 67cc38d3a2ddd7884a2e1bf96f3b63311f52b4b9
+
     public function about(){
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         return view('pages.about', ['about'=>$about]);
@@ -137,16 +133,17 @@ class baseController extends Controller
         if ($account==1 && $passwordDB==$password) {
             $request->session()->put('users', '$email');
             return redirect('dashboard');
-        } else {
-<<<<<<< HEAD
-            return view('pages.login');
-=======
-            return redirect('login');    
->>>>>>> 67cc38d3a2ddd7884a2e1bf96f3b63311f52b4b9
+        }else {
+             return redirect('admin-login');    
         }
     }
+
     public function logout(Request $request){
         $request->session()->flush();
         return redirect('home');   
     }
+    public function addProduct(Request $request){
+        return redirect('home');
+    }
+
 }

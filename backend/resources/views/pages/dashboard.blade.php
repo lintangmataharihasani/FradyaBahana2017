@@ -9,15 +9,16 @@
            <div id="addProductModal" class="modal">
               <div class="modal-content">
                 <div class="row">
-                  <form class="col s12">
+                  <form action="addProduct" class="col s12">
+                  {{ csrf_field() }}
                     <div class="row">
                       <h4>Add New Products</h4>
                       <div class="input-field col s12">
-                        <input placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
+                        <input required placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
                         <label for="product_name">Product Name</label>
                       </div>
                       <div class="input-field col s12">
-                            <select>
+                            <select required>
                               <option value="" disabled selected>Choose category....</option>
                               <option value="1">Option 1</option>
                               <option value="2">Option 2</option>
@@ -25,13 +26,27 @@
                             </select>
                         <label for="product_category">Product Category</label>
                       </div>
+                      <div class="input-field col s6">
+                        <select required>
+                          <option>Solid</option>
+                          <option>Liquid</option>
+                          <option>Gas</option>
+                          <option>Crystal</option>
+                        </select>
+                        <label for="product_state">State</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input class="validate" type="number" min="1" max="100" placeholder="Concentration" name="" required>
+                        <label for="product_concentration">Concentration</label>
+                      </div>
+                      <div class="modal-footer">
+                         <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+                      </div>
                     </div>
                   </form>
                 </div>
               </div>
-              <div class="modal-footer">
-                <a class="waves-effect wave-light btn" href="#">Save</a>
-              </div>
+          
             </div>
 
           <table class="striped highlight responsive-table centered">
@@ -60,9 +75,9 @@
                       </div>
                     </form>
                   </div>
-                </div>
-                <div class="modal-footer">
-                   <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                  <div class="modal-footer">
+                      <input type="submit" class="waves-effect wave-light btn"></input>
+                    </div>
                 </div>
              </div>
 
