@@ -9,44 +9,55 @@
            <div id="addProductModal" class="modal">
               <div class="modal-content">
                 <div class="row">
-                  <form action="addProduct" class="col s12">
+
+                  <form class="col s12" method="post" action="addProduct">
                   {{ csrf_field() }}
                     <div class="row">
-                      <h4>Add New Products</h4>
+                      <h4>Add New Product</h4>
                       <div class="input-field col s12">
                         <input required placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
                         <label for="product_name">Product Name</label>
                       </div>
                       <div class="input-field col s12">
-                            <select required>
-                              <option value="" disabled selected>Choose category....</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
-                            </select>
+                        <select name="product_category" id="product_category" multiple>
+                          <option value="" disabled selected>Choose Category</option>
+                          <option value="Industrial Chemicals">Industrial Chemicals</option>
+                          <option value="Water Treatment Chemicals">Water Treatment Chemicals</option>
+                          <option value="Oil Field Chemicals">Oil Field Chemicals</option>
+                          <option value="Electronic Chemicals">Electronic Chemicals</option>
+                          <option value="Agro Chemicals">Agro Chemicals</option>
+                          <option value="Cleaning Chemicals">Cleaning Chemicals</option>
+                          <option value="Resin, Adhesive, Paint, and Coating Chemicals">Resin, Adhesive, Paint, and Coating Chemicals</option>
+                          <option value="Fine Chemicals">Fine Chemicals</option>
+                          <option value="Construction Chemicals">Construction Chemicals</option>
+                          <option value="Food and Feed Chemicals">Food and Feed Chemicals</option>
+                          <option value="Auxiuliary Chemicals">Auxiuliary Chemicals</option>
+                          <option value="Specialty Chemicals">Specialty Chemicals</option>
+                        </select>
+
                         <label for="product_category">Product Category</label>
                       </div>
-                      <div class="input-field col s6">
-                        <select required>
-                          <option>Solid</option>
-                          <option>Liquid</option>
-                          <option>Gas</option>
-                          <option>Crystal</option>
-                        </select>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: liquid" id="product_state" name="product_state" type="text" class="validate">
                         <label for="product_state">State</label>
                       </div>
-                      <div class="input-field col s6">
-                        <input class="validate" type="number" min="1" max="100" placeholder="Concentration" name="" required>
+                      <div class="input-field col s12">
+                        <input placeholder="ex: 50" id="product_concentration" name="product_concentration" type="number" class="validate">
                         <label for="product_concentration">Concentration</label>
                       </div>
-                      <div class="modal-footer">
-                         <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+                      <div class="input-field col s12">
+                          <label for="product_desc">Description</label>
+                          <textarea id="textarea1" class="materialize-textarea" name="product_desc" id="product_desc"></textarea>
                       </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                      <input type="submit" class="waves-effect wave-light btn"></input>
                     </div>
                   </form>
                 </div>
-              </div>
-          
+              </div>          
+              </div>        
             </div>
 
           <table class="striped highlight responsive-table centered">
@@ -62,7 +73,7 @@
             
             @foreach ($products as $product)
               <tr>
-              <td>{{$product->nama}}</td>
+              <td><strong>{{$product->nama}}</strong> ({{$product->state}}, {{$product->concentration}}%)</td>
               <td><a class="waves-effect wave-light btn modal-trigger" href="#show{{ $product->nama}}".>Show</a></td>
               
               <div id="show{{ $product->nama}}" class="modal">
@@ -71,7 +82,11 @@
                     <form class="col s12">
                       <div class="row">
                         <h4>{{$product->nama}}</h4>
-                        <p>{{$product->deskripsi}}</p>
+                        <div class="left-align container">
+                          <p>State : {{$product->state}}</p>
+                          <p>Concentration : {{$product->concentration}}</p>
+                          <p>Deskripsi : {{$product->deskripsi}}</p>
+                        </div>
                       </div>
                     </form>
                   </div>

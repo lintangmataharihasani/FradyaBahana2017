@@ -37,10 +37,10 @@ class baseController extends Controller
             return redirect('home');
         }
     }
+
     public function login() {
         return view('pages.login');
     }
-
 
     public function about(){
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
