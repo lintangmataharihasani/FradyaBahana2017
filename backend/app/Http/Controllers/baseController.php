@@ -32,7 +32,8 @@ class baseController extends Controller
             $products = DB::table('produk')->get();
             $services = DB::table('service')->get();
             $contents = DB::table('konten')->get();
-            return view('pages.dashboard',['products'=> $products, 'services'=>$services, 'contents'=>$contents]);    
+            $category = DB::table('kategori')->get();
+            return view('pages.dashboard',['products'=> $products, 'categories'=>$category, 'services'=>$services, 'contents'=>$contents]);    
         }else{
             return redirect('home');
         }

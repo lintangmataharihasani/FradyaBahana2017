@@ -21,19 +21,10 @@
                       <div class="input-field col s12">
                         <select name="product_category" id="product_category" multiple>
                           <option value="" disabled selected>Choose Category</option>
-                          <option value="Industrial Chemicals">Industrial Chemicals</option>
-                          <option value="Water Treatment Chemicals">Water Treatment Chemicals</option>
-                          <option value="Oil Field Chemicals">Oil Field Chemicals</option>
-                          <option value="Electronic Chemicals">Electronic Chemicals</option>
-                          <option value="Agro Chemicals">Agro Chemicals</option>
-                          <option value="Cleaning Chemicals">Cleaning Chemicals</option>
-                          <option value="Resin, Adhesive, Paint, and Coating Chemicals">Resin, Adhesive, Paint, and Coating Chemicals</option>
-                          <option value="Fine Chemicals">Fine Chemicals</option>
-                          <option value="Construction Chemicals">Construction Chemicals</option>
-                          <option value="Food and Feed Chemicals">Food and Feed Chemicals</option>
-                          <option value="Auxiuliary Chemicals">Auxiuliary Chemicals</option>
-                          <option value="Specialty Chemicals">Specialty Chemicals</option>
-                        </select>
+                          @foreach($categories as $category)
+                          <option value='{{$category->nama_kategori}}'>{{$category->nama_kategori}}</option>  
+                          @endforeach
+                      </select>
 
                         <label for="product_category">Product Category</label>
                       </div>
