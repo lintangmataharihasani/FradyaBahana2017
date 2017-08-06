@@ -47,7 +47,7 @@
             
             @foreach ($products as $product)
               <tr>
-              <td>{{$product->nama}}</td>
+              <td><strong>{{$product->nama}}</strong> ({{$product->state}}, {{$product->concentration}}%)</td>
               <td><a class="waves-effect wave-light btn modal-trigger" href="#show{{ $product->nama}}".>Show</a></td>
               
               <div id="show{{ $product->nama}}" class="modal">
@@ -56,7 +56,11 @@
                     <form class="col s12">
                       <div class="row">
                         <h4>{{$product->nama}}</h4>
-                        <p>{{$product->deskripsi}}</p>
+                        <div class="left-align container">
+                          <p>State : {{$product->state}}</p>
+                          <p>Concentration : {{$product->concentration}}</p>
+                          <p>Deskripsi : {{$product->deskripsi}}</p>
+                        </div>
                       </div>
                     </form>
                   </div>
