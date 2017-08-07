@@ -21,6 +21,7 @@ Route::get('/services','baseController@services');
 Route::get('/dashboard','baseController@dashboard');
 Route::get('/details', 'baseController@details');
 Route::get('/admin-login','baseController@login');
+Route::get('detail-admin/{productName}','baseController@detailAdmin');
 Route::post('/addService', 'baseController@addService');
 Route::post('/editService', 'baseController@editService');
 Route::post('/deleteService', 'baseController@deleteService');

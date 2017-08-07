@@ -54,7 +54,7 @@
           <thead>
             <tr>
                 <th>Product Name</th>
-                <th>Description</th>
+                <th>Detail</th>
                 <th>Action</th>
             </tr>
           </thead>
@@ -63,30 +63,8 @@
             
             @foreach ($products as $product)
               <tr>
-              <td><strong>{{$product->nama}}</strong> ({{$product->state}}, {{$product->concentration}}%)</td>
-              <td><a class="waves-effect wave-light btn modal-trigger" href="#show{{ $product->nama}}".>Show</a></td>
-              
-              <div id="show{{ $product->nama}}" class="modal">
-                <div class="modal-content">
-                  <div class="row">
-                    <form class="col s12">
-                      <div class="row">
-                        <br>
-                        <div class="left-align container">
-                           <h4>{{$product->nama}}</h4>
-                          <p>State : {{$product->state}}</p>
-                          <p>Concentration : {{$product->concentration}} %</p>
-                          <p>Deskripsi : {{$product->deskripsi}}</p>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                      <input type="submit" class="waves-effect wave-light btn"></input>
-                    </div>
-                </div>
-             </div>
-
+              <td><strong>{{$product->nama}}</strong></td>
+              <td><a class="waves-effect wave-light btn modal-trigger" href="detail-admin".>Show Detail</a></td>
               <td><a class="waves-effect wave-light btn" href="#edit{{ $product->nama}}">Edit</a>
               <div id="edit{{ $product->nama}}" class="modal">
                 <div class="modal-content">

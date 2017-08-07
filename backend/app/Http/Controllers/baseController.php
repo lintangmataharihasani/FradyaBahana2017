@@ -38,7 +38,11 @@ class baseController extends Controller
             return redirect('home');
         }
     }
-
+    public function detailAdmin(Request $request){
+        $product_name= Input::get('productName');
+        $concentration= DB::table('concentration_produk')->where('nama',$product_name)->value('concentration');
+        return view('pages.detail-admin',['concentration'=>$concentration]);
+    }
     public function login() {
         return view('pages.login');
     }
