@@ -27,6 +27,13 @@ class baseController extends Controller
         }  
     }
 
+    public function productDetails(){
+        $product = DB::table('produk')->where()->value();
+        $state_product = DB::table('state_produk')->where()->value();
+        $concentration_product = DB::table('concentration_produk')->where()->value();    
+        return view('pages.product-details', ['product'=>$product, 'state_product'=>$state_product, 'concentration_product'=>$concentration_product]);
+    }
+
     public function dashboard(Request $request){
         if($request->session()->has('users')){
             $products = DB::table('produk')->get();

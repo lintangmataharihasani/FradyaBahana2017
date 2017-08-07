@@ -30,3 +30,4 @@ Route::post('/editContent', 'baseController@editContent');
 Route::post('/editProduct', 'baseController@editProduct');
 Route::post('/login', 'baseController@loginAdmin');
 Route::post('/addProduct','baseController@addProduct');
+Route::post('/productDetails', 'baseController@productDetails');
