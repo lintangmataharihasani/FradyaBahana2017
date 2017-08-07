@@ -111,6 +111,7 @@ class baseController extends Controller
     public function deleteProduct(Request $request) {
         $productName = $request->input('product_name_delete');
         DB::table('produk')->where('nama','=',$productName)->delete();
+        DB::table('kategori_produk')->where('nama_produk','=',$productName)->delete();
         return redirect('dashboard');
     }
 
@@ -144,7 +145,19 @@ class baseController extends Controller
         return redirect('home');   
     }
     public function addProduct(Request $request){
-        return redirect('home');
+        error_log('message');
+        $product_name= $request->input('product_name');
+        $product_desc = $request->input('product_desc');
+        $product_state = $request->input('product_state');
+        $product_concentration = $request->input('product_concentration');
+        $category = $request->input('product_category');
+        $counter_category = count($category);
+        for($i=0;$i<$counter_category;$i++){
+             DB::table('kategori_produk')->insert(['nama_produk'=>$product_name, 'nama_kategori'=>$category[$i]]);
+        }
+        DB::table('produk')->insert(['nama'=> $product_name, 'deskripsi'=>$product_desc,'state'=>$product_state,'concentration'=>$product_concentration]);
+        return redirect('dashboard');
+       
     }
 
 }

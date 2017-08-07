@@ -15,17 +15,16 @@
                     <div class="row">
                       <h4>Add New Product</h4>
                       <div class="input-field col s12">
-                        <input required placeholder="ex: Diethanolamine" id="product_name" type="text" class="validate">
+                        <input required placeholder="ex: Diethanolamine" id="product_name" name="product_name" type="text" class="validate">
                         <label for="product_name">Product Name</label>
                       </div>
                       <div class="input-field col s12">
-                        <select name="product_category" id="product_category" multiple>
+                        <select name="product_category[]" id="product_category" multiple>
                           <option value="" disabled selected>Choose Category</option>
                           @foreach($categories as $category)
                           <option value='{{$category->nama_kategori}}'>{{$category->nama_kategori}}</option>  
                           @endforeach
-                      </select>
-
+                        </select>
                         <label for="product_category">Product Category</label>
                       </div>
                       <div class="input-field col s12">
@@ -72,10 +71,11 @@
                   <div class="row">
                     <form class="col s12">
                       <div class="row">
-                        <h4>{{$product->nama}}</h4>
+                        <br>
                         <div class="left-align container">
+                           <h4>{{$product->nama}}</h4>
                           <p>State : {{$product->state}}</p>
-                          <p>Concentration : {{$product->concentration}}</p>
+                          <p>Concentration : {{$product->concentration}} %</p>
                           <p>Deskripsi : {{$product->deskripsi}}</p>
                         </div>
                       </div>
@@ -142,10 +142,14 @@
                    <form action="deleteProduct" method="post">
                    {{ csrf_field() }}
                       <div class="row">
-                        <input type="hidden" name="product_name_delete" value="{{ $product->nama}}">
-                        <p>Are you sure you want to remove this service?</p>
+                        <div class="container">
+                          <input type="hidden" name="product_name_delete" value="{{ $product->nama}}">
+                          <p>Are you sure you want to remove this service?</p>
+                           <button type="submit" class="waves-effect wave-light btn red">Remove</button>
+                        </div>
+                        
                       </div>
-                      <button type="submit" class="waves-effect wave-light btn red">Remove</button>
+                     
                    </form>    
                   </div>
                 </div>
