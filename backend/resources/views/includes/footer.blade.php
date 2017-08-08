@@ -29,9 +29,9 @@
     </div>
   </div>
   <div class="footer-copyright">
-    <div class="container">
-    Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a><br>
-    Icons and Illustr. created by Flaticons and Freepik
+    <div class="container" style="font-size:10px;">
+    <p>Made by <a class="brown-text text-lighten-5" href="http://materializecss.com">Materialize</a>. 
+    Icons made by Flaticons. Copyright ©2017 Fradya Bahana Innovation, All Rights Reserved</p>
     </div>
   </div>
 </footer>

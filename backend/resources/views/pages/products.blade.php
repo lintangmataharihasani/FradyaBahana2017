@@ -1,16 +1,20 @@
 @extends('layouts.default')
 @section('content')
-<div class="parallax-container valign-wrapper">
-<div class="section no-pad-bot">
-<div class="container">
-<div class="row center">
-  <h1 class="header center white-text">Our Products</h1>
-  <h5 class="header col s12 light">{{$header_tagline}}</h5>
-</div>
-</div>
-</div>
-<div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 2"></div>
-</div>
+ <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <h1 class="header center white-text">Our Products</h1>
+        <div class="row center">
+		  <h5 class="header col s12 light">{{$header_tagline}}</h5>
+          <div class="col s12">
+            <div class="row">
+            </div>
+          </div>
+        </div><br><br>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
+  </div>
 
 
 <div class="container">
