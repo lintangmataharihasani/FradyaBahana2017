@@ -43,6 +43,7 @@
 
 <div class="container">
 <div class="section">
+<h4>Menampilkan dengan kategori {{$kategori}}</h4>
 <ul class="collection">
 @foreach ($products as $product)
 <li class="collection-item avatar">
@@ -68,6 +69,6 @@
 <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 </ul> -->
 </div>
-{{ $products->links() }}
+
 </div>
 @stop

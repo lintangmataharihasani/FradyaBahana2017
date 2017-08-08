@@ -68,6 +68,6 @@
 <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 </ul> -->
 </div>
-{{ $products->links() }}
+
 </div>
 @stop

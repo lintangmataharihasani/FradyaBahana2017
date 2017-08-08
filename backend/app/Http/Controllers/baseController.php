@@ -81,8 +81,15 @@ class baseController extends Controller
         $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Product')->value('konten');
         $category = DB::table('kategori')->get();
         
-        $products = DB::table('produk')->simplePaginate(5);
-        return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
+        if($request->has('product_category')){
+            $product_category = $request->input('product_category');
+            $products = DB::select(DB::raw("SELECT * FROM PRODUK WHERE nama IN (SELECT nama_produk FROM kategori_produk WHERE nama_kategori='$product_category') "));
+            
+            return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category, 'kategori'=>$product_category]);
+        }else{
+            $products = DB::table('produk')->simplePaginate(5);
+            return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
+        }
     }
 
     public function editProduct(Request $request){
