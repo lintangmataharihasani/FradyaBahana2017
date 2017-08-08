@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2017 at 06:24 AM
+-- Generation Time: Aug 08, 2017 at 07:20 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -105,7 +105,13 @@ INSERT INTO `kategori_produk` (`nama_produk`, `nama_kategori`) VALUES
 ('Diethanolamine', 'Auxiuliary Chemicals'),
 ('Ethanolamine', 'Auxiuliary Chemicals'),
 ('Ethanolamine', 'Cleaning Chemicals'),
-('Citric Acid', 'Agro Chemicals');
+('Citric Acid', 'Agro Chemicals'),
+('Citric Acid', 'Auxiuliary Chemicals'),
+('Citric Acid', 'Food and Feed Chemicals'),
+('Citric Acid', 'Industrial Chemicals'),
+('Lactic Acid', 'Agro Chemicals'),
+('Potassium Nitrate', 'Agro Chemicals'),
+('Potassium Nitrate', 'Industrial Chemicals');
 
 -- --------------------------------------------------------
 
@@ -137,7 +143,7 @@ INSERT INTO `konten` (`nama_konten`, `konten`) VALUES
 --
 
 CREATE TABLE `produk` (
-  `nama` varchar(100) NOT NULL ON DELETE CASCADE,
+  `nama` varchar(100) NOT NULL,
   `deskripsi` text,
   `state` varchar(100) DEFAULT NULL,
   `concentration` varchar(100) DEFAULT NULL
@@ -148,9 +154,11 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`nama`, `deskripsi`, `state`, `concentration`) VALUES
-('Citric Acid', 'Apa Saja', 'Liquid', '50%, 100%'),
+('Citric Acid', 'Citric acid is a weak organic tricarboxylic acid having the chemical formula C6H8O7. It occurs naturally in citrus fruits. In biochemistry, it is an intermediate in the citric acid cycle, which occurs in the metabolism of all aerobic organisms.\r\nMore than a million tons of citric acid are manufactured every year. It is used widely as an acidifier, as a flavoring and chelating agent', 'Liquid', '50%, 100%'),
 ('Diethanolamine', 'Diethanolamine, often abbreviated as DEA or DEOA, is an organic compound with the formula HN(CH2CH2OH)2. Pure diethanolamine is a white solid at room temperature, but its tendency to absorb water and to supercool[2] mean it is often encountered as a colorless, viscous liquid. Diethanolamine is polyfunctional, being a secondary amine and a diol. Like other organic amines, diethanolamine acts as a weak base. Reflecting the hydrophilic character of the secondary amine and hydroxyl groups, DEA is soluble in water. Amides prepared from DEA are often also hydrophilic. Recently, the chemical has been classified by the International Agency for Research on Cancer as \"possibly carcinogenic to humans (Group 2B)\".', 'Liquid, Solid, Gas', '20%, 30%, 50%'),
-('Ethanolamine', 'Ethanolamine, also called 2-aminoethanol or monoethanolamine (often abbreviated as ETA or MEA), is an organic chemical compound with the formula HOCH2CH2NH2. The molecule is both a primary amine and a primary alcohol (due to a hydroxyl group). Ethanolamine is a colorless, viscous liquid with an odor reminiscent to that of ammonia. Its derivatives are widespread in nature, e.g., lipids.', 'Liquid', '25%, 50%');
+('Ethanolamine', 'Ethanolamine, also called 2-aminoethanol or monoethanolamine (often abbreviated as ETA or MEA), is an organic chemical compound with the formula HOCH2CH2NH2. The molecule is both a primary amine and a primary alcohol (due to a hydroxyl group). Ethanolamine is a colorless, viscous liquid with an odor reminiscent to that of ammonia. Its derivatives are widespread in nature, e.g., lipids.', 'Liquid', '25%, 50%'),
+('Lactic Acid', 'Lactic acid is an organic compound with the formula CH3CH(OH)COOH. In its solid state, it is white and water-soluble. In its liquid state, it is clear. It is produced both naturally and synthetically. With a hydroxyl group adjacent to the carboxyl group, lactic acid is classified as an alpha-hydroxy acid (AHA). In the form of its conjugate base called lactate, it plays a role in several biochemical processes.', 'Liquid, Solid', '50%, 100%'),
+('Potassium Nitrate', 'Membuat pupuk dan bahan bakar serbaguna', 'Solid, Gel, Crystal', '50%, 100%');
 
 -- --------------------------------------------------------
 
