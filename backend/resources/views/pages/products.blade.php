@@ -25,7 +25,7 @@
 	{{ csrf_field() }}
 		<div class="row">
 			<div class="input-field col s12 m4 l10">
-				<select name="product_category[]" id="product_category" multiple>
+				<select name="product_category" id="product_category" >
 	                <option value="" disabled selected>Choose Category</option>
 	                    @foreach($categories as $category)
 	                <option value='{{$category->nama_kategori}}'>{{$category->nama_kategori}}</option>  
@@ -34,7 +34,7 @@
 	            <label for="product_category">Product Category</label>
 			</div>
 			<div class="input-field col s12 m4 l2">
-				<input type="submit" class="waves-effect wave-light btn"></input>
+				<input type="submit" value="Search" class="waves-effect wave-light btn"></input>
 			</div>
 		</div>
 	</form>
