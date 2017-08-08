@@ -36,8 +36,8 @@ class baseController extends Controller
 
     public function dashboard(Request $request){
         if($request->session()->has('users')){
-            $products = DB::table('produk')->get();
-            $services = DB::table('service')->get();
+            $products = DB::table('produk')->simplePaginate(5);
+            $services = DB::table('service')->simplePaginate(5);
             $contents = DB::table('konten')->get();
             $category = DB::table('kategori')->get();
             return view('pages.dashboard',['products'=> $products, 'categories'=>$category, 'services'=>$services, 'contents'=>$contents]);    
@@ -79,7 +79,7 @@ class baseController extends Controller
         
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Product')->value('konten');
-        $products = DB::table('produk')->simplePaginate(3);
+        $products = DB::table('produk')->simplePaginate(5);
         $category = DB::table('kategori')->get();
         return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
     }
