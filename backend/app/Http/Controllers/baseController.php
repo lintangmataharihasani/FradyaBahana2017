@@ -79,7 +79,8 @@ class baseController extends Controller
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Product')->value('konten');
         $products = DB::table('produk')->simplePaginate(3);
-        return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about]);
+        $category = DB::table('kategori')->get();
+        return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
     }
 
     public function editProduct(Request $request){

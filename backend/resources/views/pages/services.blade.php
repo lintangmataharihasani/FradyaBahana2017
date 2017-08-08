@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="images/background02.png" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
