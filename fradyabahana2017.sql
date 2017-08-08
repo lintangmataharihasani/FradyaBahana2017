@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2017 at 02:31 PM
+-- Generation Time: Aug 08, 2017 at 06:24 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -53,19 +53,6 @@ CREATE TABLE `concentration_produk` (
   `concentration` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `concentration_produk`
---
-
-INSERT INTO `concentration_produk` (`nama`, `concentration`) VALUES
-('Monoethanolamine', 50),
-('Monoethanolamine', 75),
-('Monoethanolamine', 80),
-('Monoethanolamine', 100),
-('Diethanolamine', 25),
-('Diethanolamine', 50),
-('Diethylethanolamine', 100);
-
 -- --------------------------------------------------------
 
 --
@@ -110,14 +97,15 @@ CREATE TABLE `kategori_produk` (
 --
 
 INSERT INTO `kategori_produk` (`nama_produk`, `nama_kategori`) VALUES
-('Diethanolamine', 'Industrial Chemicals'),
-('Diethylethanolamine', 'Industrial Chemicals'),
-('Monoethanolamine', 'Industrial Chemicals'),
 ('N,N-Dimethylethanolamine S', 'Industrial Chemicals'),
 ('Triethanolamine', 'Industrial Chemicals'),
-('Monoethanolamine', 'Specialty Chemicals'),
 ('N,N-Dimethylethanolamine S', 'Auxiuliary Chemicals'),
-('Triethanolamine', 'Water Treatment Chemicals');
+('Triethanolamine', 'Water Treatment Chemicals'),
+('Diethanolamine', 'Agro Chemicals'),
+('Diethanolamine', 'Auxiuliary Chemicals'),
+('Ethanolamine', 'Auxiuliary Chemicals'),
+('Ethanolamine', 'Cleaning Chemicals'),
+('Citric Acid', 'Agro Chemicals');
 
 -- --------------------------------------------------------
 
@@ -149,10 +137,10 @@ INSERT INTO `konten` (`nama_konten`, `konten`) VALUES
 --
 
 CREATE TABLE `produk` (
-  `nama` varchar(100) NOT NULL,
+  `nama` varchar(100) NOT NULL ON DELETE CASCADE,
   `deskripsi` text,
   `state` varchar(100) DEFAULT NULL,
-  `concentration` int(10) DEFAULT NULL
+  `concentration` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -160,9 +148,9 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`nama`, `deskripsi`, `state`, `concentration`) VALUES
-('Diethanolamine', 'Produk ini bisa buat obat keselek', 'liquid', 50),
-('Diethylethanolamine', 'kalo ini obat apa ya????eaaa', 'crystal', NULL),
-('Monoethanolamine', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \r\n	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.', 'liquid', 70);
+('Citric Acid', 'Apa Saja', 'Liquid', '50%, 100%'),
+('Diethanolamine', 'Diethanolamine, often abbreviated as DEA or DEOA, is an organic compound with the formula HN(CH2CH2OH)2. Pure diethanolamine is a white solid at room temperature, but its tendency to absorb water and to supercool[2] mean it is often encountered as a colorless, viscous liquid. Diethanolamine is polyfunctional, being a secondary amine and a diol. Like other organic amines, diethanolamine acts as a weak base. Reflecting the hydrophilic character of the secondary amine and hydroxyl groups, DEA is soluble in water. Amides prepared from DEA are often also hydrophilic. Recently, the chemical has been classified by the International Agency for Research on Cancer as \"possibly carcinogenic to humans (Group 2B)\".', 'Liquid, Solid, Gas', '20%, 30%, 50%'),
+('Ethanolamine', 'Ethanolamine, also called 2-aminoethanol or monoethanolamine (often abbreviated as ETA or MEA), is an organic chemical compound with the formula HOCH2CH2NH2. The molecule is both a primary amine and a primary alcohol (due to a hydroxyl group). Ethanolamine is a colorless, viscous liquid with an odor reminiscent to that of ammonia. Its derivatives are widespread in nature, e.g., lipids.', 'Liquid', '25%, 50%');
 
 -- --------------------------------------------------------
 
@@ -197,18 +185,6 @@ CREATE TABLE `state_produk` (
   `nama` varchar(100) NOT NULL,
   `state` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `state_produk`
---
-
-INSERT INTO `state_produk` (`nama`, `state`) VALUES
-('Diethanolamine', 'liquid'),
-('Diethanolamine', 'crystal'),
-('Diethanolamine', 'solid'),
-('Diethylethanolamine', 'liquid'),
-('Diethylethanolamine', 'solid'),
-('Monoethanolamine', 'liquid');
 
 --
 -- Indexes for dumped tables
