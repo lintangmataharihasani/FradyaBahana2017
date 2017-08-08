@@ -46,8 +46,8 @@
 <ul class="collection">
 @foreach ($products as $product)
 <li class="collection-item avatar">
-<img src="images/conveyor.png" alt="" class="circle">
-<span class="title"><strong>{{ $product->nama}}</strong></span>
+<a href="details?product={{$product->nama}}" class="black-text"><img src="images/conveyor.png" alt="" class="circle">
+<span class="title"><strong><h5>{{ $product->nama}}</h5></strong></span></a>
 <p>
 {{ $product->deskripsi}}
 </p>
