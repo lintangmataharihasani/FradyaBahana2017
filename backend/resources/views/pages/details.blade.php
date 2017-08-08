@@ -35,12 +35,9 @@
               <p>{{$deskripsi}}</p><br>
 
               <h5><strong>Available in</strong></h5>
-              <p>State : @foreach($states as $state)
-                {{$state->state}}<span>,</span>  
-              @endforeach<br>
-              Concentration  : @foreach($concentration as $con)
-                {{$con->concentration}}<span>% ,</span>  
-              @endforeach</p>        
+              
+              <p>State : {{$state}}</p>
+              <p>Concentration : {{$concentration}}</p>
             </li>
           </ul>
           <a class="waves-effect wave-light btn red" href="products">Back To Product Page</a>

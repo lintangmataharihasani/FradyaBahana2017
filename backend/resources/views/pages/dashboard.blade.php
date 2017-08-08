@@ -28,11 +28,11 @@
                         <label for="product_category">Product Category</label>
                       </div>
                       <div class="input-field col s12">
-                        <input placeholder="ex: liquid" id="product_state" name="product_state" type="text" class="validate">
+                        <input placeholder="contoh: Liquid, Solid, Gas (Harap pisahkan antar state dengan ', ' dan awali dengan huruf kapital)" id="product_state" name="product_state" type="text" class="">
                         <label for="product_state">State</label>
                       </div>
                       <div class="input-field col s12">
-                        <input placeholder="ex: 50" id="product_concentration" name="product_concentration" type="number" class="validate">
+                        <input placeholder="contoh: 50%, 75% (Harap pisahkan antar concentration dengan ', ' dan akhiri dengan '%')" id="product_concentration" name="product_concentration" type="text" class="">
                         <label for="product_concentration">Concentration</label>
                       </div>
                       <div class="input-field col s12">
