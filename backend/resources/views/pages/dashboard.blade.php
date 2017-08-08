@@ -64,7 +64,7 @@
             @foreach ($products as $product)
               <tr>
               <td><strong>{{$product->nama}}</strong></td>
-              <td><a class="waves-effect wave-light btn modal-trigger" href="detail-admin".>Show Detail</a></td>
+              <td><a class="waves-effect wave-light btn modal-trigger" href="detail-admin?product={{$product->nama}}".>Show Detail</a></td>
               <td><a class="waves-effect wave-light btn" href="#edit{{ $product->nama}}">Edit</a>
               <div id="edit{{ $product->nama}}" class="modal">
                 <div class="modal-content">

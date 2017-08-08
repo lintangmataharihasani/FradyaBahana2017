@@ -21,7 +21,7 @@
     <div class="parallax"><img src="images/background01.png" alt="Unsplashed background img 1"></div>
   </div>
 
-  <div class="container">
+   <div class="container">
     <div class="section">
       <h3>Diethanolamine</h3>
       <div class="row">
@@ -32,12 +32,21 @@
           <ul class="collection">
             <li class="collection-item">
               <h5><strong>Description</strong></h5>
-              <p>Diethanolamine belongs to the class of ethanolamines. Among many other applications it is mainly used in the production of agrochemicals, detergents and surfactants.
-              Diethanolamine belongs to the class of ethanolamines. Among many other applications it is mainly used in the production of agrochemicals, detergents and surfactants.</p>   
+              <p>{{$deskripsi}}</p><br>
+
+              <h5><strong>Available in</strong></h5>
+              <p>State : @foreach($states as $state)
+                {{$state->state}}<span>,</span>  
+              @endforeach<br>
+              Concentration  : @foreach($concentration as $con)
+                {{$con->concentration}}<span>% ,</span>  
+              @endforeach</p>        
             </li>
           </ul>
+          <a class="waves-effect wave-light btn red" href="products">Back To Product Page</a>
         </div>
       </div>
     </div>
   </div>
+
 @stop

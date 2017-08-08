@@ -31,7 +31,7 @@
 <p>
 {{ $product->deskripsi}}
 </p>
-<a href="#!" class="secondary-content"><i class="material-icons">expand_more</i></a>
+<a href="details?product={{$product->nama}}" class="secondary-content"><i class="material-icons">expand_more</i></a>
 </li>
 
 @endforeach

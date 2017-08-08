@@ -45,10 +45,21 @@ class baseController extends Controller
             return redirect('home');
         }
     }
+
+    public function details(){
+        $product_name= Input::get('product');
+        $product_info=DB::table('produk')->where('nama',$product_name)->value('deskripsi');
+        $concentration= DB::table('concentration_produk')->where('nama',$product_name)->get();
+        $state =DB::table('state_produk')->where('nama',$product_name)->get();
+        return view('pages.details',['product'=>$product_name,'concentration'=>$concentration,'states'=>$state,'deskripsi'=>$product_info]);
+    }
+
+
     public function detailAdmin(Request $request){
-        $product_name= Input::get('productName');
-        $concentration= DB::table('concentration_produk')->where('nama',$product_name)->value('concentration');
-        return view('pages.detail-admin',['concentration'=>$concentration]);
+        $product_name= Input::get('product');
+        $concentration= DB::table('concentration_produk')->where('nama',$product_name)->get();
+        $state =DB::table('state_produk')->where('nama',$product_name)->get();
+        return view('pages.detail-admin',['product'=>$product_name,'concentration'=>$concentration,'states'=>$state]);
     }
     public function login() {
         return view('pages.login');
@@ -100,10 +111,7 @@ class baseController extends Controller
         return redirect('dashboard');
     }
 
-    public function details(){
-        return view('pages.details');
-    }
-
+  
     public function editService(Request $request) {
         $serviceName = $request->input('service_name_edit');
         $serviceDesc = $request->input('service_desc_edit');
@@ -121,8 +129,11 @@ class baseController extends Controller
 
     public function deleteProduct(Request $request) {
         $productName = $request->input('product_name_delete');
-        DB::table('produk')->where('nama','=',$productName)->delete();
+        DB::table('state_produk')->where('nama','=',$productName)->delete();
+        DB::table('concentration_produk')->where('nama','=',$productName)->delete();
         DB::table('kategori_produk')->where('nama_produk','=',$productName)->delete();
+        DB::table('produk')->where('nama','=',$productName)->delete();
+        
         return redirect('dashboard');
     }
 
@@ -157,16 +168,29 @@ class baseController extends Controller
     }
     public function addProduct(Request $request){
         error_log('message');
+        
         $product_name= $request->input('product_name');
         $product_desc = $request->input('product_desc');
         $product_state = $request->input('product_state');
         $product_concentration = $request->input('product_concentration');
         $category = $request->input('product_category');
         $counter_category = count($category);
-        for($i=0;$i<$counter_category;$i++){
-             DB::table('kategori_produk')->insert(['nama_produk'=>$product_name, 'nama_kategori'=>$category[$i]]);
+        
+        //Insert State
+        $countState = count(DB::table('state_produk')->where('nama',$product_name)->get());
+        $countConn = count(DB::table('concentration_produk')->where('nama',$product_name)->get());
+
+        if($countState==0 & $countConn==0){
+            DB::table('produk')->insert(['nama'=> $product_name, 'deskripsi'=>$product_desc,'state'=>$product_state,'concentration'=>$product_concentration]);
+            //Insert Category
+            for($i=0;$i<$counter_category;$i++){
+                 DB::table('kategori_produk')->insert(['nama_produk'=>$product_name, 'nama_kategori'=>$category[$i]]);
+            }
         }
-        DB::table('produk')->insert(['nama'=> $product_name, 'deskripsi'=>$product_desc,'state'=>$product_state,'concentration'=>$product_concentration]);
+        
+        DB::table('state_produk')->insert(['nama'=> $product_name, 'state'=>$product_state]);
+        DB::table('concentration_produk')->insert(['nama'=> $product_name, 'concentration'=>$product_concentration]);       
+       
         return redirect('dashboard');
        
     }
