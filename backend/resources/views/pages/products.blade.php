@@ -46,12 +46,18 @@
 <ul class="collection">
 @foreach ($products as $product)
 <li class="collection-item avatar">
-<a href="details?product={{$product->nama}}" class="black-text"><img src="images/conveyor.png" alt="" class="circle">
-<span class="title"><strong><h5>{{ $product->nama}}</h5></strong></span></a>
+	<div class="row">
+		<div class="col s12 m4 l1">
+			<a href="details?product={{$product->nama}}" class="black-text"><img src="images/test-tube.png" alt="" class="responsive-img" style="height:30px; margin-top: 10px;">
+		</div>
+		<div class="col s12 m4 l11">
+			<span class="title"><strong><h5>{{ $product->nama}}</h5></strong></span></a>
+		</div>
+	</div>
 <p>
 {{ $product->deskripsi}}
 </p>
-<a href="details?product={{$product->nama}}" class="secondary-content"><i class="material-icons">expand_more</i></a>
+<a href="details?product={{$product->nama}}" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a>
 </li>
 
 @endforeach
@@ -68,6 +74,8 @@
 <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 </ul> -->
 </div>
+<div class="row center">
 {{ $products->links() }}
+</div>
 </div>
 @stop
