@@ -74,12 +74,8 @@
 <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 </ul> -->
 </div>
-<<<<<<< HEAD
-
-=======
 <div class="row center">
 {{ $products->links() }}
->>>>>>> e53bf7670c410eb276ea434ba6dde5db2b95f036
 </div>
 </div>
 @stop
