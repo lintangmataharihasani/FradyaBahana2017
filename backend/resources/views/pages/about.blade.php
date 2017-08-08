@@ -13,7 +13,7 @@
         </div><br><br>
       </div>
     </div>
-    <div class="parallax"><img src="images/gelaskimia.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
   <div class="container">

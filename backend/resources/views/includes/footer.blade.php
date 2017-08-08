@@ -3,34 +3,35 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Company Bio</h5>
-        <p class="grey-text text-lighten-4"></p>
-
-
+        <h5 class="white-text">Fradya Bahana Innovation</h5>
+        <p class="grey-text text-lighten-4">
+          Jl. Jalan No 123, Cilandak, Jakarta Selatan 12450<br>
+          Phone: 021-123-456  Fax: 021-123-456
+        </p>
       </div>
       <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
+        <h5 class="white-text">Link</h5>
         <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
+          <li><a class="white-text" href="products">Products</a></li>
+          <li><a class="white-text" href="services">Services</a></li>
+          <li><a class="white-text" href="about">About</a></li>
+          <li><a class="white-text" href="admin-login">Login</a></li>
         </ul>
       </div>
       <div class="col l3 s12">
         <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
+        <div class="row">
+          <div class="col s12 m6 l3"><a href="http://facebook.com"><img class="responsive-img" style="height:25px;" src="images/logo_facebook.png" align="Fradya Bahana"></a></div>
+          <div class="col s12 m6 l3"><a href="http://twitter.com"><img class="responsive-img" style="height:25px;" src="images/logo_twitter.png" align="Fradya Bahana"></a></div>
+          <div class="col s12 m6 l3"><a href="http://google.com"><img class="responsive-img" style="height:25px;" src="images/logo_googleplus.png" align="Fradya Bahana" href="http://google.com"></a></div>
+        </div>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-    Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+    Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a><br>
+    Icons and Illustr. created by Flaticons and Freepik
     </div>
   </div>
 </footer>

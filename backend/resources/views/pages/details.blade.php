@@ -18,12 +18,12 @@
         </div><br><br>
       </div>
     </div>
-    <div class="parallax"><img src="images/background01.png" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
    <div class="container">
     <div class="section">
-      <h3>Diethanolamine</h3>
+      <h3>{{$product}}</h3>
       <div class="row">
         <div class="col s12 m6 l3">
           <img src="images/gelaskimia.jpg" alt="images/gelaskimia.jpg" class="responsive-image" id="gambarProduk"/>   
