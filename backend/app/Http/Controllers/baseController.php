@@ -75,7 +75,8 @@ class baseController extends Controller
         return view('pages.about', ['about'=>$about]);
     }
 
-    public function products(){
+    public function products(Request $request){
+        
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Product')->value('konten');
         $products = DB::table('produk')->simplePaginate(3);
