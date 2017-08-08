@@ -88,13 +88,9 @@ class baseController extends Controller
         $nama = $request->input('nama');
         //$kategori = $request->input('kategori');
         $deskripsi = $request->input('deskripsi');
-        $state = $request->input('state');
-        $concentration = $request->input('concentration');
         
         DB::table('produk')
                 ->where('nama', $nama)
-                ->where('state', $state)
-                ->where('concentration', $concentration)
                 ->update(array('deskripsi' => $deskripsi));
         return redirect('dashboard');
 

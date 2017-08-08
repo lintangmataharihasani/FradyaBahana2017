@@ -98,12 +98,6 @@
                         <textarea id="deskripsi" name="deskripsi" class="materialize-textarea"></textarea> 
                         <label for="deskripsi">Description</label>
                       </div>
-                      <div class="input-field col s12">
-                        <input placeholder="ex: Liquid" id="state" name="state" type="hidden" value="{{$product->state}}" class="validate">
-                      </div>
-                      <div class="input-field col s12">
-                        <input placeholder="ex: 70" id="concentration" name="concentration" type="hidden" value="{{$product->concentration}}" class="validate">
-                      </div>
                       <div class="modal-footer">
                          <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
                       </div>
