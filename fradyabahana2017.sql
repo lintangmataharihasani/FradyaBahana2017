@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2017 at 07:20 AM
+-- Generation Time: Aug 08, 2017 at 09:01 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -176,12 +176,11 @@ CREATE TABLE `service` (
 --
 
 INSERT INTO `service` (`nama`, `deskripsi`) VALUES
-('Delivery Management', 'Ini Budi. Budi Bermain Bola'),
-('Distribution Management', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \r\n	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.'),
-('HSE Management', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \r\n	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.'),
-('Lab and Sample Management', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \r\n	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.'),
-('Panjat Sosial', 'Fenomena anak sekarang ye\r\nHobi pamerin barang ye\r\nPos di grup wa, sc, ig ye\r\nDemi like dan komen orang ye\r\n\r\nGaul setiap hari wajib nge-path\r\nArtis selebriti dia pepet\r\nPencitraan ga sesuai daun perak\r\nPinjem duit dulu kagak malu\r\n\r\nAnak nongkrong ibu kota\r\nAmet gosip dan berita\r\nGayanya sosialita\r\nUangnya enggak ada\r\nCari simpati buka kartu cari status baru\r\n\r\nHati hati zaman sekarang\r\nBanyak orang berteman punya maksud tujuan\r\nMengumbar kedekatan dapatin keuntungan\r\nAbis manis lo dibuang\r\n\r\nPanjat panjat panjat panjat\r\nPanjat panjat panjat panjat\r\nPanjat sosial\r\nPanjat sosial\r\nPanjat sosial terus bro sampai naik status\r\n\r\nPanjat panjat panjat panjat\r\nPanjat panjat panjat panjat\r\nPanjat sosial\r\nPanjat sosial\r\nPanjatin terus bro sampai naik status\r\n\r\nBanyak yang ingin panjat\r\nBanyak yang cara jahat oma oma\r\nSemua sosial kalian panjat\r\nKalian panjat\r\n\r\nAda yang tipe sok terkenal sok dikenal\r\nBerteman sebatas nominal faktalah\r\nKan ngikut gaya baju sampai model rambut\r\n\r\nOla komosta ise koniciwa\r\nAze bonzu madam\r\nPerfoma mulu foto lu lu trus minta difollow\r\nUdah cup plis plis unfollow oh no\r\nLu dan gua makin padat\r\n\r\nHati hati zaman sekarang\r\nBanyak orang berteman punya maksud tujuan\r\nMengumbar kedekatan dapatin keuntungan\r\nAbis manis lo dibuang\r\n\r\nHati hati zaman sekarang\r\nBanyak orang berteman punya maksud tujuan\r\nMengumbar kedekatan dapatin keuntungan\r\nAbis manis lo dibuang\r\n\r\nPanjat panjat panjat panjat\r\nPanjat panjat panjat panjat\r\nPanjat sosial\r\nPanjat sosial\r\nPanjat sosial terus bro sampai naik status\r\n\r\nPanjat panjat panjat panjat\r\nPanjat panjat panjat panjat\r\nPanjat sosial\r\nPanjat sosial\r\nPanjatin terus bro sampai naik status\r\n\r\nPanjat panjat panjat panjat\r\nPanjat panjat panjat panjat\r\nPanjat sosial\r\nPanjat sosial\r\nPanjat sosial terus bro sampai naik status'),
-('Stock Management', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \r\n	Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac.');
+('Delivery Management', 'Delivery Management Description'),
+('Distribution Management', 'Distribution Management Description'),
+('HSE Management', 'HSE Management Description'),
+('Lab and Sample Management', 'Lab and Sample Management Description'),
+('Stock Management', 'Stock Management Description');
 
 -- --------------------------------------------------------
 
