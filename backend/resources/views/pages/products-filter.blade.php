@@ -26,13 +26,7 @@
 		<div class="row">
 			<div class="input-field col s12 m4 l10">
 			<input placeholder="Product name" id="product_name" name="product_name" type="text" class="validate">
-<!-- 				<select name="product_category" id="product_category" >
-	                <option value="" disabled selected>Choose Category</option>
-	                    @foreach($categories as $category)
-	                <option value='{{$category->nama_kategori}}'>{{$category->nama_kategori}}</option>  
-	                    @endforeach
-	            </select> -->
-	            <label for="product_category">Product Category</label>
+	            <label for="product_category">Product Name</label>
 			</div>
 			<div class="input-field col s12 m4 l2">
 				<input type="submit" value="Search" class="waves-effect wave-light btn"></input>
@@ -41,9 +35,9 @@
 	</form>
 </div>
 </div>
-
 <div class="container">
 <div class="section">
+<br>
 <ul class="collection">
 @foreach ($products as $product)
 <li class="collection-item avatar">
@@ -74,9 +68,6 @@
 <li class="waves-effect"><a href="#!">5</a></li>
 <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 </ul> -->
-</div>
-<div class="row center">
-{{ $products->links() }}
 </div>
 </div>
 @stop

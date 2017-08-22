@@ -98,12 +98,6 @@
                         <textarea id="deskripsi" name="deskripsi" class="materialize-textarea"></textarea> 
                         <label for="deskripsi">Description</label>
                       </div>
-                      <div class="input-field col s12">
-                        <input placeholder="ex: Liquid" id="state" name="state" type="hidden" value="{{$product->state}}" class="validate">
-                      </div>
-                      <div class="input-field col s12">
-                        <input placeholder="ex: 70" id="concentration" name="concentration" type="hidden" value="{{$product->concentration}}" class="validate">
-                      </div>
                       <div class="modal-footer">
                          <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
                       </div>
@@ -122,7 +116,7 @@
                       <div class="row">
                         <div class="container">
                           <input type="hidden" name="product_name_delete" value="{{ $product->nama}}">
-                          <p>Are you sure you want to remove this service?</p>
+                          <p>Are you sure you want to remove this product?</p>
                            <button type="submit" class="waves-effect wave-light btn red">Remove</button>
                         </div>
                         
@@ -232,21 +226,15 @@
                   <div class="row">
                    <form action="deleteService" method="post">
                    {{ csrf_field() }}
-                        <input type="hidden" name="service_name_delete" value="{{ $service->nama}}">
-                        <div class="container row left" style="margin-bottom: 12px;">
-                          <div class="row center">
-                            <div class="col s12 m4 l2">
-                              <i class="red-text medium material-icons">error_outline</i> 
-                            </div>
-                            <div class="col s12 m4 l10">
-                              <h5 class="modal-content-text" id="modal-content-text">Are you sure you want to remove this service?</h5>
-                            </div>
-                          </div>
-                        </div><br><br><br><br>
-                        <div class="modal-footer">
-                           <a class="waves-effect wave-light btn modal-action modal-close" href="#!">Close</a>
-                           <button type="submit" class="waves-effect wave-light btn red grey-text text-lighten-5">Remove</button>
+                      <div class="row">
+                        <div class="container">
+                          <input type="hidden" name="service_name_delete" value="{{ $service->nama}}">
+                          <p>Are you sure you want to remove this service?</p>
+                           <button type="submit" class="waves-effect wave-light btn red">Remove</button>
                         </div>
+                        
+                      </div>
+                     
                    </form>    
                   </div>
                 </div>

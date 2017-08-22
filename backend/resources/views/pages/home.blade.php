@@ -58,7 +58,7 @@
               <p>Find out more about our contact here.</p>
             </div>
             <div class="card-action">
-              <a href="#">Read More</a>
+              <a href="#about">Read More</a>
             </div>
           </div>
         </div>
@@ -81,9 +81,8 @@
 
   <div class="container">
     <div class="section">
-
       <div class="row">
-        <div class="col s12 center">
+        <div class="col s12 center" id="about">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>About Us</h4>
           <p class="left-align light">{{$about}}</p>

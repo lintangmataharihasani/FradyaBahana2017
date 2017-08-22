@@ -36,8 +36,8 @@ class baseController extends Controller
 
     public function dashboard(Request $request){
         if($request->session()->has('users')){
-            $products = DB::table('produk')->simplePaginate(5);
-            $services = DB::table('service')->simplePaginate(5);
+            $products = DB::table('produk')->simplePaginate(10);
+            $services = DB::table('service')->simplePaginate(10);
             $contents = DB::table('konten')->get();
             $category = DB::table('kategori')->get();
             return view('pages.dashboard',['products'=> $products, 'categories'=>$category, 'services'=>$services, 'contents'=>$contents]);    
@@ -75,25 +75,32 @@ class baseController extends Controller
         return view('pages.about', ['about'=>$about]);
     }
 
-    public function products(){
+    public function products(Request $request){
+        
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Product')->value('konten');
-        $products = DB::table('produk')->simplePaginate(5);
         $category = DB::table('kategori')->get();
-        return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
+        
+        if($request->has('product_name')){
+            $product_name = $request->input('product_name');
+            // $products = DB::select(DB::raw("SELECT * FROM PRODUK WHERE nama IN (SELECT nama_produk FROM kategori_produk WHERE nama_kategori='$product_category') "));
+           $products = DB::select(DB::raw("SELECT * FROM PRODUK WHERE nama LIKE '%$product_name%'"));
+            
+            // return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category, 'kategori'=>$product_category]);
+                return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
+        }else{
+            $products = DB::table('produk')->simplePaginate(10);
+            return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
+        }
     }
 
     public function editProduct(Request $request){
         $nama = $request->input('nama');
         //$kategori = $request->input('kategori');
         $deskripsi = $request->input('deskripsi');
-        $state = $request->input('state');
-        $concentration = $request->input('concentration');
         
         DB::table('produk')
                 ->where('nama', $nama)
-                ->where('state', $state)
-                ->where('concentration', $concentration)
                 ->update(array('deskripsi' => $deskripsi));
         return redirect('dashboard');
 
@@ -105,7 +112,7 @@ class baseController extends Controller
     public function services(){
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Service')->value('konten');
-        $services = DB::table('service')->simplePaginate(5);
+        $services = DB::table('service')->simplePaginate(10);
         return view('pages.services', ['services' => $services, 'header_tagline'=>$header_tagline, 'about'=>$about]);
     }
 

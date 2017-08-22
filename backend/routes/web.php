@@ -16,6 +16,8 @@ Route::get('/home','baseController@index');
 Route::get('/about','baseController@about');
 Route::get('/logout','baseController@logout');
 Route::get('/products','baseController@products');
+Route::post('/products','baseController@products');
+
 Route::get('/tes','baseController@tes');
 Route::get('/services','baseController@services');
 Route::get('/dashboard','baseController@dashboard');

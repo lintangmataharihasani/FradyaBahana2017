@@ -23,7 +23,7 @@
         <div class="row">
           <div class="col s12 m6 l3"><a href="http://facebook.com"><img class="responsive-img" style="height:25px;" src="images/logo_facebook.png" align="Fradya Bahana"></a></div>
           <div class="col s12 m6 l3"><a href="http://twitter.com"><img class="responsive-img" style="height:25px;" src="images/logo_twitter.png" align="Fradya Bahana"></a></div>
-          <div class="col s12 m6 l3"><a href="http://google.com"><img class="responsive-img" style="height:25px;" src="images/logo_googleplus.png" align="Fradya Bahana" href="http://google.com"></a></div>
+          <div class="col s12 m6 l3"><a href="http://google.com"><img class="responsive-img" style="height:25px;" src="images/instagram.png" align="Fradya Bahana" href="http://google.com"></a></div>
         </div>
       </div>
     </div>

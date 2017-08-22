@@ -23,7 +23,7 @@
      <ul class="collapsible popout" data-collapsible="accordion">
         @foreach ($services as $service)
          <li>
-            <div class="collapsible-header"><img src="images/flasks.png" style="width: 30px;height: 30px; margin-top: 10px;" /><span class="pull-right">{{ $service->nama}}</span>               
+            <div class="collapsible-header"><img src="images/support.png" style="width: 40px;height: 40px; margin-top: 10px;" /><span class="pull-right">{{ $service->nama}}</span>               
             </div>
             <div class="collapsible-body"><p>{{ $service->deskripsi}}</p></div>
          </li>
