@@ -38,6 +38,7 @@
               
               <p>State : {{$state}}</p>
               <p>Concentration : {{$concentration}}</p>
+              <p>Packaging : {{$packaging}}</p>
             </li>
           </ul>
           <a class="waves-effect wave-light btn red" href="products">Back To Product Page</a>

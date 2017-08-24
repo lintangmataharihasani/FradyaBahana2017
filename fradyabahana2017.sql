@@ -79,6 +79,7 @@ INSERT INTO `kategori` (`nama_kategori`) VALUES
 ('Oil Field Chemicals'),
 ('Resin, Adhesive, Paint, and Coating Chemicals'),
 ('Specialty Chemicals'),
+('Others'),
 ('Water Treatment Chemicals');
 
 -- --------------------------------------------------------
@@ -146,7 +147,8 @@ CREATE TABLE `produk` (
   `nama` varchar(100) NOT NULL,
   `deskripsi` text,
   `state` varchar(100) DEFAULT NULL,
-  `concentration` varchar(100) DEFAULT NULL
+  `concentration` varchar(100) DEFAULT NULL,
+  `packaging` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

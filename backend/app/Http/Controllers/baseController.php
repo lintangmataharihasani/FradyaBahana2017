@@ -51,9 +51,10 @@ class baseController extends Controller
         $product_info=DB::table('produk')->where('nama',$product_name)->value('deskripsi');
         $concentration= DB::table('produk')->where('nama',$product_name)->value('concentration');
         $state= DB::table('produk')->where('nama',$product_name)->value('state');
+        $packaging_product = DB::table('produk')->where('nama',$product_name)->value('packaging');    
         //$concentration= DB::table('concentration_produk')->where('nama',$product_name)->get();
         //$state =DB::table('state_produk')->where('nama',$product_name)->get();
-        return view('pages.details',['product'=>$product_name,'concentration'=>$concentration,'state'=>$state,'deskripsi'=>$product_info]);
+        return view('pages.details',['product'=>$product_name,'concentration'=>$concentration,'state'=>$state,'deskripsi'=>$product_info, 'packaging'=>$packaging_product]);
     }
 
 
@@ -62,9 +63,10 @@ class baseController extends Controller
         $concentration= DB::table('produk')->where('nama',$product_name)->value('concentration');
         $state= DB::table('produk')->where('nama',$product_name)->value('state');
         $product_info=DB::table('produk')->where('nama',$product_name)->value('deskripsi');
+        $packaging_product = DB::table('produk')->where('nama',$product_name)->value('packaging');    
         //$concentration= DB::table('concentration_produk')->where('nama',$product_name)->get();
         //$state =DB::table('state_produk')->where('nama',$product_name)->get();
-        return view('pages.detail-admin',['product'=>$product_name,'concentration'=>$concentration,'state'=>$state, 'deskripsi'=>$product_info]);
+        return view('pages.detail-admin',['product'=>$product_name,'concentration'=>$concentration,'state'=>$state, 'packaging'=>$packaging_product, 'deskripsi'=>$product_info]);
     }
     public function login() {
         return view('pages.login');
@@ -190,13 +192,14 @@ class baseController extends Controller
         $product_concentration = $request->input('product_concentration');
         $category = $request->input('product_category');
         $counter_category = count($category);
+        $product_packaging = $request->input('product_packaging');
         
         //Insert State
         //$countState = count(DB::table('state_produk')->where('nama',$product_name)->get());
         //$countConn = count(DB::table('concentration_produk')->where('nama',$product_name)->get());
 
         //if($countState==0 & $countConn==0){
-            DB::table('produk')->insert(['nama'=> $product_name, 'deskripsi'=>$product_desc,'state'=>$product_state,'concentration'=>$product_concentration]);
+            DB::table('produk')->insert(['nama'=> $product_name, 'deskripsi'=>$product_desc,'state'=>$product_state,'concentration'=>$product_concentration, 'packaging'=>$product_packaging]);
             //Insert Category
             for($i=0;$i<$counter_category;$i++){
                  DB::table('kategori_produk')->insert(['nama_produk'=>$product_name, 'nama_kategori'=>$category[$i]]);

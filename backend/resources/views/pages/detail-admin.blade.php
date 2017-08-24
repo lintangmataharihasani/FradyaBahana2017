@@ -14,6 +14,7 @@
 
               <p>State : {{$state}}</p>
               <p>Concentration : {{$concentration}}</p>
+              <p>Packaging : {{$packaging}}</p>
           		<a class="waves-effect wave-light btn red" href="dashboard">Back To Dashboard</a>
 
           	</div>

@@ -36,6 +36,10 @@
                         <label for="product_concentration">Concentration</label>
                       </div>
                       <div class="input-field col s12">
+                        <input placeholder="contoh: Barrel" id="product_packaging" name="product_packaging" type="text" class="">
+                        <label for="product_packaging">Packaging</label>
+                      </div>
+                      <div class="input-field col s12">
                           <label for="product_desc">Description</label>
                           <textarea id="textarea1" class="materialize-textarea" name="product_desc" id="product_desc"></textarea>
                       </div>
