@@ -2,16 +2,11 @@
 
 @section('content')
 <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container header-content">
-        <h1 class="header center white-text text-shadow">Fradya Bahana Innovation</h1>
-        <div class="row center">
-          <h5 class="header col s12 light text-shadow">{{$header_tagline}}</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
-  </div>
+   
+  <h1 class="header center white-text text-shadow">Fradya Bahana Innovation</h1>
+  <h5 class="header col s12 light text-shadow">{{$header_tagline}}</h5>
+    
+</div>
 
 
 

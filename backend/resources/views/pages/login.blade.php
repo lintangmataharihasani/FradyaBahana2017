@@ -1,11 +1,7 @@
 @extends('layouts.default')
 @section('content')
  <div id="index-banner" class="parallax-container">
-    <div class="section">
-      <div class="container header-content">
-        <h1 class="header center text-shadow">Login</h1>
-      </div>
-    </div>
+    <h1 class="header center text-shadow">Login</h1>  
     <div class="container">
     	<div class="row center">
     		<form action="login" method="post">

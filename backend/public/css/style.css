@@ -75,7 +75,12 @@ p {
   height: 220px;
 }
 #index-banner{
-  padding: 20px;
+  padding: 10%;
+  background: url('../images/product.jpg');
+}
+
+#index-banner h5{
+  text-align: center;
 }
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
