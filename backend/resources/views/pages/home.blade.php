@@ -2,20 +2,14 @@
 
 @section('content')
 <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container header-content">
-        <h1 class="header center white-text text-shadow">Fradya Bahana Innovation</h1>
-        <div class="row center">
-          <h5 class="header col s12 light text-shadow">{{$header_tagline}}</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
+   
+  <h1 class="header center white-text text-shadow">Fradya Bahana Innovation</h1>
+  <h5 class="header col s12 light text-shadow">{{$header_tagline}}</h5>
+    
+</div>
 
 <div class="grey lighten-5">
-  <div class="container">
+  <div class="container parallax-container black-text text-black">
     <div class="section">
       <!--   Icon Section   -->
       <div class="row">
@@ -68,19 +62,18 @@
   </div>
 </div>
 
-
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">{{$section_tagline}}</h5>
+          <h5 class="header col s12 light">{{$about}}</h5>
         </div>
       </div>
     </div>
     <div class="parallax"><img src="images/pharmacy.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
-<div class="grey lighten-5">
+<!-- <div class="grey lighten-5">
   <div class="container">
     <div class="section">
       <div class="row">
@@ -93,6 +86,6 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
 @stop

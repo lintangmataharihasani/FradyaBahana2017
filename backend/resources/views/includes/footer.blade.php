@@ -5,8 +5,7 @@
       <div class="col l6 s12">
         <h5 class="white-text">Fradya Bahana Innovation</h5>
         <p class="grey-text text-lighten-4">
-          Jl. Jalan No 123, Cilandak, Jakarta Selatan 12450<br>
-          Phone: 021-123-456  Fax: 021-123-456
+          Plaza Oleos 5th Fl(Fortice), Jalan T.B. Simatupang Kav. 53 RT.2/RT.1, Pasar Minggu, Kota Jakarta Selatan, DKI Jakarta 12520
         </p>
       </div>
       <div class="col l3 s12">

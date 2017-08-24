@@ -75,11 +75,22 @@ p {
 .card-content{
   height: 120px;
 }
+
+#about {
+  font-size: 1.5em;
+  text-align: justify;
+}
 .card-image img{
   height: 220px;
 }
 #index-banner{
-  padding: 20px;
+  padding: 10%;
+  background: url('../images/product.jpg') no-repeat fixed center;
+  background-size: cover;
+}
+
+#index-banner h5{
+  text-align: center;
 }
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
