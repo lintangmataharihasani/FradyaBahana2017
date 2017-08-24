@@ -25,8 +25,8 @@
 	{{ csrf_field() }}
 		<div class="row">
 			<div class="input-field col s12 m4 l10">
-			<input placeholder="Product name" id="product_name" name="product_name" type="text" class="validate">
-	            <label for="product_category">Product Name</label>
+				<input placeholder="Product name" id="product_name" name="product_name" type="text" class="validate">
+	            <label for="product_name">Product Name</label>
 			</div>
 			<div class="input-field col s12 m4 l2">
 				<input type="submit" value="Search" class="waves-effect wave-light btn"></input>
@@ -37,6 +37,10 @@
 </div>
 <div class="container">
 <div class="section">
+<<<<<<< HEAD
+=======
+<h5>Menampilkan produk dengan kategori {{$kategori}}</h5>
+>>>>>>> df28129c4978e22d49afef42b8497bcc0b3719b9
 <br>
 <ul class="collection">
 @foreach ($products as $product)
@@ -56,6 +60,21 @@
 </li>
 
 @endforeach
+<<<<<<< HEAD
+=======
+
+
+<!-- </ul>
+<ul class="pagination center">
+<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+<li class="active"><a href="">1</a></li>
+<li class="waves-effect"><a href="#!">2</a></li>
+<li class="waves-effect"><a href="#!">3</a></li>
+<li class="waves-effect"><a href="#!">4</a></li>
+<li class="waves-effect"><a href="#!">5</a></li>
+<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+</ul> -->
+>>>>>>> df28129c4978e22d49afef42b8497bcc0b3719b9
 </div>
 </div>
 @stop

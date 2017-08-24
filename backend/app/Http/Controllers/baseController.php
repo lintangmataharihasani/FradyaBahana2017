@@ -76,11 +76,11 @@ class baseController extends Controller
     }
 
     public function products(Request $request){
-        
         $about = DB::table('konten')->where('nama_konten', 'About Us')->value('konten');
         $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Product')->value('konten');
         $category = DB::table('kategori')->get();
         
+
         if($request->has('product_name')){
             $product_name = $request->input('product_name');
             // $products = DB::select(DB::raw("SELECT * FROM PRODUK WHERE nama IN (SELECT nama_produk FROM kategori_produk WHERE nama_kategori='$product_category') "));
@@ -90,8 +90,8 @@ class baseController extends Controller
                 return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
         }else{
             $products = DB::table('produk')->simplePaginate(10);
-            return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
         }
+
     }
 
     public function editProduct(Request $request){

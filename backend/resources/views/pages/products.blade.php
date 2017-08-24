@@ -57,5 +57,46 @@
 	</div>
 </div>
 <div class="parallax"><img src="images/background03.png" alt="Unsplashed background img 1"></div>
+		</div>
+	</form>
+</div>
+</div>
+
+<div class="container">
+<div class="section">
+<ul class="collection">
+@foreach ($products as $product)
+<li class="collection-item avatar">
+	<div class="row">
+		<div class="col s12 m4 l1">
+			<a href="details?product={{$product->nama}}" class="black-text"><img src="images/test-tube.png" alt="" class="responsive-img" style="height:30px; margin-top: 10px;">
+		</div>
+		<div class="col s12 m4 l11">
+			<span class="title"><strong><h5>{{ $product->nama}}</h5></strong></span></a>
+		</div>
+	</div>
+<p>
+{{ $product->deskripsi}}
+</p>
+<a href="details?product={{$product->nama}}" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a>
+</li>
+
+@endforeach
+
+
+<!-- </ul>
+<ul class="pagination center">
+<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+<li class="active"><a href="">1</a></li>
+<li class="waves-effect"><a href="#!">2</a></li>
+<li class="waves-effect"><a href="#!">3</a></li>
+<li class="waves-effect"><a href="#!">4</a></li>
+<li class="waves-effect"><a href="#!">5</a></li>
+<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+</ul> -->
+</div>
+<div class="row center">
+{{ $products->links() }}
+</div>
 </div>
 @stop
