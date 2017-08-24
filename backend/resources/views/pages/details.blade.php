@@ -32,7 +32,7 @@
           <ul class="collection">
             <li class="collection-item">
               <h5><strong>Description</strong></h5>
-              <p>{{$deskripsi}}</p><br>
+              <p style="text-align: justify;">{{$deskripsi}}</p><br>
 
               <h5><strong>Available in</strong></h5>
               

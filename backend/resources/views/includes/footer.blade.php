@@ -10,20 +10,19 @@
         </p>
       </div>
       <div class="col l3 s12">
-        <h5 class="white-text">Link</h5>
+        <h5 class="white-text">Links</h5>
         <ul>
           <li><a class="white-text" href="products">Products</a></li>
           <li><a class="white-text" href="services">Services</a></li>
           <li><a class="white-text" href="about">About</a></li>
-          <li><a class="white-text" href="admin-login">Login</a></li>
         </ul>
       </div>
       <div class="col l3 s12">
         <h5 class="white-text">Connect</h5>
         <div class="row">
-          <div class="col s12 m6 l3"><a href="http://facebook.com"><img class="responsive-img" style="height:25px;" src="images/logo_facebook.png" align="Fradya Bahana"></a></div>
-          <div class="col s12 m6 l3"><a href="http://twitter.com"><img class="responsive-img" style="height:25px;" src="images/logo_twitter.png" align="Fradya Bahana"></a></div>
-          <div class="col s12 m6 l3"><a href="http://google.com"><img class="responsive-img" style="height:25px;" src="images/instagram.png" align="Fradya Bahana" href="http://google.com"></a></div>
+          <div class="col s12 m4 l3"><a href="http://facebook.com"><img class="responsive-img" style="height:25px;" src="images/logo_facebook.png" align="Fradya Bahana"></a></div>
+          <div class="col s12 m4 l3"><a href="http://twitter.com"><img class="responsive-img" style="height:25px;" src="images/logo_twitter.png" align="Fradya Bahana"></a></div>
+          <div class="col s12 m4 l3"><a href="http://google.com"><img class="responsive-img" style="height:25px;" src="images/instagram.png" align="Fradya Bahana" href="http://google.com"></a></div>
         </div>
       </div>
     </div>
