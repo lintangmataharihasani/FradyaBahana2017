@@ -15,7 +15,7 @@
 
 
 
-  <div class="container">
+  <div class="container parallax-container black-text text-black">
     <div class="section">
       <!--   Icon Section   -->
       <div class="row">
@@ -66,7 +66,6 @@
       </div>
     </div>
   </div>
-
 
 
   <div class="parallax-container valign-wrapper">
