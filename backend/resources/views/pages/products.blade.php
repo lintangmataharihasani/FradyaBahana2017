@@ -37,15 +37,12 @@
 			<li class="collection-item avatar">
 				<div class="row">
 					<div class="col s12 m4 l1">
-						<a href="details?product={{$product->nama}}" class="black-text"><img src="images/test-tube.png" alt="" class="responsive-img" style="height:30px; margin-top: 10px;">
+						<a href="details?product={{$product->nama}}" class="black-text"><img src="images/flask.png" alt="" class="responsive-img" style="height:30px; margin-top: 10px;">
 					</div>
 					<div class="col s12 m4 l11">
 						<span class="title"><strong><h5>{{ $product->nama}}</h5></strong></span></a>
 					</div>
 				</div>
-				<p>
-				{{ $product->deskripsi}}
-				</p>
 				<a href="details?product={{$product->nama}}" class="secondary-content">
 					<i class="material-icons">keyboard_arrow_right</i>
 				</a>
