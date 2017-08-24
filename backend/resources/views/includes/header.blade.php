@@ -1,4 +1,4 @@
-<nav class="light-blue darken-4 white-text" role="navigation">
+<nav class="orange darken-1 white-text" role="navigation">
   <div class="nav-wrapper container white-text">
     <a id="logo-container" href="#" class="brand-logo">
 

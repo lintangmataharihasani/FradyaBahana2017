@@ -21,7 +21,8 @@
     <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-   <div class="container">
+<div id="about" class="grey lighten-3">
+    <div class="container">
     <div class="section">
       <h3>{{$product}}</h3>
       <div class="row">
@@ -30,7 +31,7 @@
         </div>
         <div class="col s12 m6 l9">
           <ul class="collection">
-            <li class="collection-item">
+            <li class="collection-item grey lighten-3">
               <h5><strong>Description</strong></h5>
               <p style="text-align: justify;">{{$deskripsi}}</p><br>
 
@@ -47,3 +48,5 @@
   </div>
 
 @stop
+</div>
+   

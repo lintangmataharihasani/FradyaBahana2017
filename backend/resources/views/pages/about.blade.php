@@ -16,9 +16,8 @@
     <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-
-    <div class="parallax-container valign-wrapper">
-    <div class="container">
+<div class="grey lighten-5">
+  <div class="container">
     <div class="section no-pad-bot">
      <div class="row">
         <div class="col s12 center">
@@ -28,7 +27,5 @@
       </div>
     </div>
     </div>
-    <div class="parallax"><img src="images/background03.png" alt="Unsplashed background img 2"></div>
-  </div>
-
+</div>
 @stop

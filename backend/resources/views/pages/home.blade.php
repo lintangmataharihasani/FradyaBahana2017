@@ -14,7 +14,7 @@
   </div>
 
 
-
+<div class="grey lighten-5">
   <div class="container">
     <div class="section">
       <!--   Icon Section   -->
@@ -66,7 +66,7 @@
       </div>
     </div>
   </div>
-
+</div>
 
 
   <div class="parallax-container valign-wrapper">
@@ -80,6 +80,7 @@
     <div class="parallax"><img src="images/pharmacy.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
+<div class="grey lighten-5">
   <div class="container">
     <div class="section">
       <div class="row">
@@ -92,6 +93,6 @@
 
     </div>
   </div>
-
+</div>
 
 @stop

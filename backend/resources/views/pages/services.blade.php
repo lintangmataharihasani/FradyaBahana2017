@@ -17,7 +17,7 @@
     <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
-
+<div class="grey lighten-5">
   <div class="container">
     <div class="section">
       <h4 class="center">Service List</h4>
@@ -35,3 +35,4 @@
     {{ $services->links() }}
   </div>
 @stop
+</div>
