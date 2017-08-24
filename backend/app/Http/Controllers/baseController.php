@@ -87,9 +87,11 @@ class baseController extends Controller
            $products = DB::select(DB::raw("SELECT * FROM PRODUK WHERE nama LIKE '%$product_name%'"));
             
             // return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category, 'kategori'=>$product_category]);
-                return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
+            return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
         }else{
             $products = DB::table('produk')->simplePaginate(10);
+
+            return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
         }
 
     }
