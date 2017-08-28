@@ -37,31 +37,22 @@
 </div>
 <div class="container">
 <div class="section">
-<<<<<<< HEAD
-=======
-<h5>Menampilkan produk dengan kategori {{$kategori}}</h5>
->>>>>>> df28129c4978e22d49afef42b8497bcc0b3719b9
 <br>
 <ul class="collection">
 @foreach ($products as $product)
 <li class="collection-item avatar">
 	<div class="row">
 		<div class="col s12 m4 l1">
-			<a href="details?product={{$product->nama}}" class="black-text"><img src="images/test-tube.png" alt="" class="responsive-img" style="height:30px; margin-top: 10px;">
+			<a href="details?product={{$product->nama}}" class="black-text"><img src="images/flask.png" alt="" class="responsive-img" style="height:30px; margin-top: 10px;">
 		</div>
 		<div class="col s12 m4 l11">
 			<span class="title"><strong><h5>{{ $product->nama}}</h5></strong></span></a>
 		</div>
 	</div>
-<p>
-{{ $product->deskripsi}}
-</p>
 <a href="details?product={{$product->nama}}" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a>
 </li>
 
 @endforeach
-<<<<<<< HEAD
-=======
 
 
 <!-- </ul>
@@ -74,7 +65,6 @@
 <li class="waves-effect"><a href="#!">5</a></li>
 <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 </ul> -->
->>>>>>> df28129c4978e22d49afef42b8497bcc0b3719b9
 </div>
 </div>
 @stop
