@@ -79,8 +79,12 @@ p {
 #services{
   padding: 20px;
 }
+
+#about-profile{
+  padding: 80px;
+}
+
 #about-home{
-  
   padding: 80px 0px 80px 0px;
   background: url('../images/pharmacy.jpg') no-repeat center fixed;
   background-size: cover;
