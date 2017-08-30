@@ -88,12 +88,12 @@ class baseController extends Controller
             // $products = DB::select(DB::raw("SELECT * FROM PRODUK WHERE nama IN (SELECT nama_produk FROM kategori_produk WHERE nama_kategori='$product_category') "));
            $products = DB::select(DB::raw("SELECT * FROM PRODUK WHERE nama LIKE '%$product_name%'"));
            $jumlahProduk = count($products);
-           $pesan = "Produk tidak tersedia";
+           $pesan = "Maaf, produk tidak tersedia";
 
            if ($jumlahProduk==0) {
              return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category,'pesan'=>$pesan]); 
            } else {
-            return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category], 'pesan'=>'');
+             return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
            }      
         }else{
             $products = DB::table('produk')->simplePaginate(10);

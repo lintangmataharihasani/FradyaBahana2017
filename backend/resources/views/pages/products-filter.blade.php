@@ -37,7 +37,7 @@
 </div>
 <div class="container">
 <div class="section">
-<br>
+@empty($pesan)
 <ul class="collection">
 @foreach ($products as $product)
 <li class="collection-item avatar">
@@ -53,7 +53,19 @@
 </li>
 @endforeach
 </ul>
+@endempty
+@isset($pesan)
+<div class="card-panel red white-text text-white lighten-2" style="height: 70px;">
+	<div class="row">
+		<div class="col s1 m4 l1">
+			<img src="images/delete.png" alt="" class="responsive-img" style="height: 20px;" />
+		</div>
+		<div class="col s11 m4 l11">
+			{{$pesan}}
+		</div>
+	</div>
 </div>
-<p>{{ $pesan }}</p>
+@endisset
+</div>
 </div>
 @stop
