@@ -8,9 +8,9 @@
     
 </div>
 
-<div class="grey lighten-5">
+<div id="services" class="grey lighten-5">
   <div class="container parallax-container black-text text-black">
-    <div class="section">
+
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m4">
@@ -61,17 +61,14 @@
     </div>
   </div>
 </div>
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">{{$about}}</h5>
-        </div>
-      </div>
+<div id="about-home">
+  <div class="container">
+    <div class="row center">
+        <h5 class="header col s12 light">{{$about}}</h5>
     </div>
-    <div class="parallax"><img src="images/pharmacy.jpg" alt="Unsplashed background img 2"></div>
-  </div>
+  </div>  
+</div>
+
 
 <!-- <div class="grey lighten-5">
   <div class="container">
