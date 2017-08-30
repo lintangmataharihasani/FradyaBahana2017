@@ -31,7 +31,7 @@
         </div>
         <div class="col s12 m6 l9">
           <ul class="collection">
-            <li class="collection-item grey lighten-3">
+            <li class="collection-item">
               <h5><strong>Description</strong></h5>
               <p style="text-align: justify;">{{$deskripsi}}</p><br>
 
@@ -46,7 +46,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div></div>
+
 
 @stop
 </div>

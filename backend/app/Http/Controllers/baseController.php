@@ -93,7 +93,7 @@ class baseController extends Controller
         }else{
             $products = DB::table('produk')->simplePaginate(10);
 
-            return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
+            return view('pages.products', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about]);
         }
 
     }
