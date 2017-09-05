@@ -93,7 +93,7 @@ class baseController extends Controller
            if ($jumlahProduk==0) {
              return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category,'pesan'=>$pesan]); 
            } else {
-            return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category], 'pesan'=>'');
+            return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category, 'pesan'=>'']);
            }      
         }else{
             $products = DB::table('produk')->simplePaginate(10);
