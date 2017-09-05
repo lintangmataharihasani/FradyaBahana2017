@@ -24,13 +24,10 @@
 </div>
 </div>
 <div class="container">
-<<<<<<< HEAD
 
 <br>
-=======
 <div class="section">
 @empty($pesan)
->>>>>>> a45d77acab19e6aa09090120695faa452670326a
 <ul class="collection">
 @foreach ($products as $product)
 <li class="collection-item avatar">
@@ -45,16 +42,13 @@
 <a href="details?product={{$product->nama}}" class="secondary-content"><i class="material-icons">keyboard_arrow_right</i></a>
 </li>
 @endforeach
-<<<<<<< HEAD
-
-=======
 </ul>
 @endempty
 @isset($pesan)
 <div class="card-panel red white-text text-white lighten-2" style="height: 70px;">
 	<div class="row">
 		<div class="col s1 m4 l1">
-			<img src="images/delete.png" alt="" class="responsive-img" style="height: 20px;" />
+			<img src="images/delete.png" alt="" style="height: 20px;" />
 		</div>
 		<div class="col s11 m4 l11">
 			{{$pesan}}
@@ -63,6 +57,5 @@
 </div>
 @endisset
 </div>
->>>>>>> a45d77acab19e6aa09090120695faa452670326a
 </div>
 @stop
