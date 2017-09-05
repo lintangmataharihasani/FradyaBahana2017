@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('<layouts class="admin"></layouts>')
 @section('content')
  <div id="index-banner" class="parallax-container">
     <h1 class="header center text-shadow">Login</h1>  
