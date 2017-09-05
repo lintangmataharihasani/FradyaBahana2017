@@ -1,22 +1,10 @@
 @extends('layouts.default')
 @section('content')
- <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <h1 class="header center white-text">Our Products</h1>
-        <div class="row center">
-		  <h5 class="header col s12 light">{{$header_tagline}}</h5>
-          <div class="col s12">
-            <div class="row">
-            </div>
-          </div>
-        </div><br><br>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-
+<div id="index-banner" class="parallax-container">
+  <h1 class="header center white-text">Our Products</h1>
+  <h5 class="header col s12 light">{{$header_tagline}}</h5>
+</div>
+	
 <div class="container">
 <div class="section">
 <!--   Icon Section   -->
@@ -36,7 +24,7 @@
 </div>
 </div>
 <div class="container">
-<div class="section">
+
 <br>
 <ul class="collection">
 @foreach ($products as $product)
@@ -54,17 +42,5 @@
 
 @endforeach
 
-
-<!-- </ul>
-<ul class="pagination center">
-<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-<li class="active"><a href="">1</a></li>
-<li class="waves-effect"><a href="#!">2</a></li>
-<li class="waves-effect"><a href="#!">3</a></li>
-<li class="waves-effect"><a href="#!">4</a></li>
-<li class="waves-effect"><a href="#!">5</a></li>
-<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-</ul> -->
-</div>
 </div>
 @stop

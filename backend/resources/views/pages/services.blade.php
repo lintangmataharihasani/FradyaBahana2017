@@ -1,21 +1,9 @@
 @extends('layouts.default')
 @section('content')
-
-   <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <h1 class="header center white-text">Our Services</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">{{$header_tagline}}</h5>
-          <div class="col s12">
-            <div class="row">
-            </div>
-          </div>
-        </div><br><br>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
-  </div>
+<div id="index-banner" class="parallax-container">
+  <h1 class="header center white-text">Our Services</h1>
+  <h5 class="header col s12 light">{{$header_tagline}}</h5>
+</div>
 
 <div class="grey lighten-5">
   <div class="container">
