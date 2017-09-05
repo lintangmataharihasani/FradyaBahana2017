@@ -16,7 +16,7 @@
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="images/our-products.jpg">
+              <img src="images/our-products.jpg" class="responsive-img" >
               <span class="card-title shadow-title text-shadow">Our Products</span>
             </div>
             <div class="card-content">
@@ -29,9 +29,9 @@
         </div>
 
         <div class="col s12 m4">
-          <div class="card">
+          <div class="card" >
             <div class="card-image">
-              <img src="images/gelaskimia.jpg">
+              <img src="images/gelaskimia.jpg" class="responsive-img">
               <span class="card-title shadow-title text-shadow">Our Services</span>
             </div>
             <div class="card-content">
@@ -44,16 +44,16 @@
         </div>
 
         <div class="col s12 m4">
-          <div class="card">
+          <div class="card" >
             <div class="card-image shadow-title">
-              <img src="images/about-us.jpg">
+              <img src="images/about-us.jpg" class="responsive-img">
               <span class="card-title text-shadow">Contact Us</span>
             </div>
             <div class="card-content">
               <p>Find out more about our contact here.</p>
             </div>
             <div class="card-action">
-              <a href="#about">Read More</a>
+              <a href="about">Read More</a>
             </div>
           </div>
         </div>
