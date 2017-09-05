@@ -22,31 +22,34 @@
 	</form>
 </div>
 </div>
-<div class="parallax-container black-text text-darken-2">
-	<div class="container">		
-			<ul class="collection">
-				@foreach ($products as $product)
-				<li class="collection-item avatar">
-					<div class="row">
-						<div class="col s12 m4 l1">
-							<a href="details?product={{$product->nama}}" class="black-text"><img src="images/flask.png" alt="" class="responsive-img" style="height:30px; margin-top: 10px;">
-						</div>
-						<div class="col s12 m4 l11">
-							<span class="title"><strong><h5>{{ $product->nama}}</h5></strong></span></a>
-						</div>
+<div class="black-text text-darken-2">
+			<div class="container">
+				<div class="section">
+					<ul class="collection">
+						@foreach ($products as $product)
+						<li class="collection-item">
+							<div class="row" style="margin-bottom: -3px">
+								<div class="col s1 m4 l1">
+									<a href="details?product={{$product->nama}}" class="black-text"><img src="images/flask.png" alt="" class="" style="height:30px; margin-top: 10px;">
+								</div>
+								<div class="col s10 m4 l10">
+									<span class="title" style="margin-top: 15px;"><h5>{{ $product->nama}}</h5></span></a>
+								</div>
+								<div class="col s1 m4 l1">
+									<a href="details?product={{$product->nama}}" class="secondary-content">
+										<img src="images/right-arrow.png" alt="" class="" style="height:20px; margin-top: 15px;">
+									</a>
+								</div>
+							</div>
+						</li>
+						@endforeach
+					</ul>
+					<div class="row center">
+						{{ $products->links() }}
 					</div>
-					<a href="details?product={{$product->nama}}" class="secondary-content">
-						<i class="material-icons">keyboard_arrow_right</i>
-					</a>
-				</li>
-				@endforeach
-		    </ul>
-		</div>
-		<div class="row center">
-		{{ $products->links() }}
-		</div>
+				</div>
+			</div>
+		</div><br><br>
 
-	
-</div>
 
 		@stop
