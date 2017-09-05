@@ -33,7 +33,7 @@
 									<a href="details?product={{$product->nama}}" class="black-text"><img src="images/flask.png" alt="" class="" style="height:30px; margin-top: 10px;">
 								</div>
 								<div class="col s10 m4 l10">
-									<span class="title" style="margin-top: 15px;"><h5>{{ $product->nama}}</h5></span></a>
+									<span class="title"><h5 style="margin-left: 15px;"> {{ $product->nama}}</h5></span></a>
 								</div>
 								<div class="col s1 m4 l1">
 									<a href="details?product={{$product->nama}}" class="secondary-content">

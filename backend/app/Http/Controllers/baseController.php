@@ -40,6 +40,7 @@ class baseController extends Controller
             $services = DB::table('service')->simplePaginate(10);
             $contents = DB::table('konten')->get();
             $category = DB::table('kategori')->get();
+            
             return view('pages.dashboard',['products'=> $products, 'categories'=>$category, 'services'=>$services, 'contents'=>$contents]);    
         }else{
             return redirect('home');
@@ -95,6 +96,7 @@ class baseController extends Controller
            } else {
              return view('pages.products-filter', ['products' => $products, 'header_tagline'=>$header_tagline, 'about'=>$about, 'categories'=>$category]);
            }      
+           
         }else{
             $products = DB::table('produk')->simplePaginate(10);
 

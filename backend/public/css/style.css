@@ -190,3 +190,7 @@ footer.page-footer {
 #dashboard-body{
   background: #dfdfdf;
 }
+
+html{
+  overflow-x:hidden;
+}
