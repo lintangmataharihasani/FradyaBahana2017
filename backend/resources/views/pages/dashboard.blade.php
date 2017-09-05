@@ -214,7 +214,7 @@
                         <input type="hidden" name="service_name_edit" value="{{ $service->nama}}">
                         <div class="input-field col s12" >
                             <label for="service_desc_edit">Service Description</label>
-                            <textarea id="service_desc_edit" name="service_desc_edit" class="materialize-textarea"></textarea> 
+                            <textarea id="service_desc_edit" name="service_desc_edit" class="materialize-textarea">{{$service->deskripsi}}</textarea> 
                         </div>
                         <div class="input-field col s12">
                             <input type="submit" class="btn">
@@ -301,7 +301,7 @@
                           <input type="hidden" name="content_name_edit" value="{{ $content->nama_konten}}">
                           <div class="input-field col s12">
                             <label for="content_desc_edit">Content Description</label>
-                            <textarea id="content_desc_edit" name="content_desc_edit" class="materialize-textarea"></textarea> 
+                            <textarea id="content_desc_edit" name="content_desc_edit" class="materialize-textarea">{{$content->konten}}</textarea> 
                           </div>
                           <div class="input-field col s12">
                             <input type="submit" class="btn">
