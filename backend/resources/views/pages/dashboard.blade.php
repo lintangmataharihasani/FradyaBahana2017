@@ -99,7 +99,7 @@
                         <label for="product_category">Product Category</label>
                       </div>-->
                       <div class="input-field col s12">
-                        <textarea id="deskripsi" name="deskripsi" class="materialize-textarea"></textarea> 
+                        <textarea id="deskripsi" name="deskripsi" class="materialize-textarea">{{$product->deskripsi}}</textarea> 
                         <label for="deskripsi">Description</label>
                       </div>
                       <div class="modal-footer">
