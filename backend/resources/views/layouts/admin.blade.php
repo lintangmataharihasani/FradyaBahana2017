@@ -6,6 +6,6 @@
 <body id="dashboard-body">
     @include('includes.header-admin')
     @yield('content')
-    @include('includes.footer')
+    @include('includes.footer-admin')
 </body>
 </html>
