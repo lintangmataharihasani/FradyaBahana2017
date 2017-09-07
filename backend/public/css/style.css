@@ -14,7 +14,10 @@ nav ul a,
 nav .brand-logo {
   color: #444;
 }
-
+#errors{
+  padding: 30px;
+  text-align: center;
+}
 .margin-top-small {
   margin-top: 10px !important;
 }
