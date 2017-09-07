@@ -52,12 +52,12 @@ class baseController extends Controller
         $product_info=DB::table('produk')->where('nama',$product_name)->value('deskripsi');
         $concentration= DB::table('produk')->where('nama',$product_name)->value('concentration');
         $state= DB::table('produk')->where('nama',$product_name)->value('state');
-        $packaging_product = DB::table('produk')->where('nama',$product_name)->value('packaging');    
+        $packaging_product = DB::table('produk')->where('nama',$product_name)->value('packaging'); 
+        $header_tagline= DB::table('konten')->where('nama_konten', 'Tagline Header Home')->value('konten');   
         //$concentration= DB::table('concentration_produk')->where('nama',$product_name)->get();
         //$state =DB::table('state_produk')->where('nama',$product_name)->get();
-        return view('pages.details',['product'=>$product_name,'concentration'=>$concentration,'state'=>$state,'deskripsi'=>$product_info, 'packaging'=>$packaging_product]);
+        return view('pages.details',['product'=>$product_name,'concentration'=>$concentration,'state'=>$state,'deskripsi'=>$product_info, 'packaging'=>$packaging_product, 'header_tagline'=>$header_tagline]);
     }
-
 
     public function detailAdmin(Request $request){
         $product_name= Input::get('product');
@@ -201,21 +201,11 @@ class baseController extends Controller
         $counter_category = count($category);
         $product_packaging = $request->input('product_packaging');
         
-        //Insert State
-        //$countState = count(DB::table('state_produk')->where('nama',$product_name)->get());
-        //$countConn = count(DB::table('concentration_produk')->where('nama',$product_name)->get());
-
-        //if($countState==0 & $countConn==0){
-            DB::table('produk')->insert(['nama'=> $product_name, 'deskripsi'=>$product_desc,'state'=>$product_state,'concentration'=>$product_concentration, 'packaging'=>$product_packaging]);
-            //Insert Category
-            for($i=0;$i<$counter_category;$i++){
-                 DB::table('kategori_produk')->insert(['nama_produk'=>$product_name, 'nama_kategori'=>$category[$i]]);
-            }
-        //}
-        
-        //DB::table('state_produk')->insert(['nama'=> $product_name, 'state'=>$product_state]);
-        //DB::table('concentration_produk')->insert(['nama'=> $product_name, 'concentration'=>$product_concentration]);       
-       
+      
+        DB::table('produk')->insert(['nama'=> $product_name, 'deskripsi'=>$product_desc,'state'=>$product_state,'concentration'=>$product_concentration, 'packaging'=>$product_packaging]);
+        for($i=0;$i<$counter_category;$i++){
+            DB::table('kategori_produk')->insert(['nama_produk'=>$product_name, 'nama_kategori'=>$category[$i]]);
+        } 
         return redirect('dashboard');
        
     }

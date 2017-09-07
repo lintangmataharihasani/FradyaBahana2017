@@ -107,6 +107,15 @@ p {
 #index-banner h5{
   text-align: center;
 }
+
+#login-banner{
+  padding: 10%;
+  background: url('../images/product.jpg') no-repeat fixed center;
+  background-size: cover;
+  height: 100vh;
+}
+
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;

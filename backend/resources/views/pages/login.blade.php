@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
- <div id="index-banner" class="parallax-container">
+ <div id="login-banner" class="parallax-container">
     <h1 class="header center text-shadow">Login</h1>  
     <div class="container">
     	<div class="row center">

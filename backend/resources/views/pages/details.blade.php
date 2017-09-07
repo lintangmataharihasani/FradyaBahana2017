@@ -1,25 +1,11 @@
 @extends('layouts.default')
 @section('content') 
 <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <h1 class="header center white-text">Fradya Bahana</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A reliable partner in total chemicals management</h5>
-          <div class="col s12">
-            <div class="row">
-              <form>
-                <div class="col s4"></div>
-                <div class="col s4"></div>
-                <div class="col s4"></div>
-              </form>
-            </div>
-          </div>
-        </div><br><br>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/product.jpg" alt="Unsplashed background img 1"></div>
-  </div>
+   
+  <h1 class="header center white-text text-shadow">Fradya Bahana Innovation</h1>
+  <h5 class="header col s12 light text-shadow">{{$header_tagline}}</h5>
+    
+</div>
 
 <div id="about" class="grey lighten-3">
     <div class="container">
