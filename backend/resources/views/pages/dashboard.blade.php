@@ -112,24 +112,24 @@
              </div>
 
               <a class="waves-effect wave-light btn red" style="margin-left: 3px" href="#delete{{ $product->nama}}">Remove</a></td>
+
               <div id="delete{{ $product->nama}}" class="modal">
                 <div class="modal-content">
                   <div class="row">
                    <form action="deleteProduct" method="post">
                    {{ csrf_field() }}
-                      <div class="row">
+                      <div class="row center">
                         <div class="container">
                           <input type="hidden" name="product_name_delete" value="{{ $product->nama}}">
-                          <p>Are you sure you want to remove this product?</p>
+                          <p>Are you sure you want to remove this service?</p>
                            <button type="submit" class="waves-effect wave-light btn red">Remove</button>
                         </div>
-                        
                       </div>
-                     
                    </form>    
                   </div>
                 </div>
               </div>
+
             </tr>
             @endforeach
           
@@ -236,9 +236,7 @@
                           <p>Are you sure you want to remove this service?</p>
                            <button type="submit" class="waves-effect wave-light btn red">Remove</button>
                         </div>
-                        
                       </div>
-                     
                    </form>    
                   </div>
                 </div>
