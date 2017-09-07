@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.login')
 @section('content')
  <div id="login-banner" class="parallax-container">
     <h1 class="header center text-shadow">Login</h1>  
